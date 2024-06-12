@@ -7,8 +7,8 @@ interface Props {
 const Question1: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className="flex flex-col items-center rounded-lg">
-      <h1 className="fixed top-8 text-white text-4xl font-bold mb-4">Q.1</h1>
-      <div className="mt-16 text-center mb-4">
+      <h1 className="mt-4 text-white text-4xl font-bold mb-4">Q.1</h1>
+      <div className="text-center mb-4">
         <p className="text-white text-sm leading-relaxed">
           드디어 꿈에 그리던 <br /> 
           미스터리 수사단에 합류하게 당신!! <br /> 

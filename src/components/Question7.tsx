@@ -7,8 +7,8 @@ interface Props {
 const Question7: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className="flex flex-col items-center rounded-lg">
-      <h1 className="fixed top-8 text-white text-4xl font-bold mb-4">Q.7</h1>
-      <div className="mt-16 text-center mb-4">
+      <h1 className="mt-4 text-white text-4xl font-bold mb-4">Q.7</h1>
+      <div className="text-center mb-4">
         <p className="text-white text-sm leading-relaxed">
           심해 깊은 곳에 있는 잠수함으로 수사를 하러 갔다.<br/>
           그런데, 갑자기 여기저기서 울리는 사이렌!<br/>

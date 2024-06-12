@@ -7,8 +7,8 @@ interface Props {
 const Question6: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className="flex flex-col items-center rounded-lg">
-      <h1 className="fixed top-8 text-white text-4xl font-bold mb-4">Q.6</h1>
-      <div className="mt-16 text-center mb-4">
+      <h1 className="mt-4 text-white text-4xl font-bold mb-4">Q.6</h1>
+      <div className="text-center mb-4">
         <p className="text-white text-sm leading-relaxed">
           사라진 실종자 6명을 찾고 있는 미스터리 수사단!<br/>
           다음 장소로 이동하려고 문을 열었는데, 복도에 시체 한 구가 널브러져 있었다.<br/>

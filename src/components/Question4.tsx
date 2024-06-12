@@ -7,8 +7,8 @@ interface Props {
 const Question4: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className="flex flex-col items-center rounded-lg">
-      <h1 className="fixed top-8 text-white text-4xl font-bold mb-4">Q.4</h1>
-      <div className="mt-16 text-center mb-4">
+      <h1 className="mt-4 text-white text-4xl font-bold mb-4">Q.4</h1>
+      <div className="text-center mb-4">
         <p className="text-white text-sm leading-relaxed">
           수사 도중 비밀의 방을 발견한 미스터리 수사단!<br />
           비밀의 방 앞에 있는 의문의 버튼을 발견한다.<br />

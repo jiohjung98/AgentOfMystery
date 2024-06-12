@@ -7,8 +7,8 @@ interface Props {
 const Question3: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
     <div className="flex flex-col items-center rounded-lg">
-      <h1 className="fixed top-8 text-white text-4xl font-bold mb-4">Q.3</h1>
-      <div className="mt-16 text-center mb-4">
+      <h1 className="mt-4 text-white text-4xl font-bold mb-4">Q.3</h1>
+      <div className="text-center mb-4">
         <p className="text-white text-sm leading-relaxed">
           문제 해결에 한창인 도중,<br/>동료가 아닌 낯선 인기척이 느껴졌다! <br />
           낯선 사람의 발소리가 점점 커지는데!
