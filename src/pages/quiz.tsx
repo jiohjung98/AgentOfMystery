@@ -1,5 +1,8 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+
 import Question1 from '@/components/Question1';
 import Question2 from '@/components/Question2';
 import Question3 from '@/components/Question3';
@@ -7,7 +10,12 @@ import Question4 from '@/components/Question4';
 import Question5 from '@/components/Question5';
 import Question6 from '@/components/Question6';
 import Question7 from '@/components/Question7';
-import Image from 'next/image';
+import HyeriResult from '@/components/result/HyeriResult';
+import JohnParkResult from '@/components/result/JohnParkResult';
+import DoHunResult from '@/components/result/DoHunResult';
+import EunJiResult from '@/components/result/EunJiResult';
+import KarinaResult from '@/components/result/KarinaResult';
+import YongJinResult from '@/components/result/YongJinResult';
 
 type Score = {
   [key: string]: number;
@@ -24,6 +32,8 @@ const Quiz = () => {
     용진: 0,
   });
 
+  console.log(score);
+
   const handleAnswerSelect = (character: string) => {
     setScore((prevScore) => ({
       ...prevScore,
@@ -32,7 +42,31 @@ const Quiz = () => {
     setCurrentQuestion((prevQuestion) => prevQuestion + 1);
   };
 
-  console.log(score);
+  const getMaxCharacter = () => {
+    const maxScore = Math.max(...Object.values(score));
+    const maxCharacters = Object.keys(score).filter((key) => score[key] === maxScore);
+    return maxCharacters[Math.floor(Math.random() * maxCharacters.length)];
+  };
+
+  if (currentQuestion > 7) {
+    const maxCharacter = getMaxCharacter();
+    switch (maxCharacter) {
+      case '혜리':
+        return <HyeriResult />;
+      case '존박':
+        return <JohnParkResult />;
+      case '도훈':
+        return <DoHunResult />;
+      case '은지':
+        return <EunJiResult />;
+      case '카리나':
+        return <KarinaResult />;
+      case '용진':
+        return <YongJinResult />;
+      default:
+        return <div>결과를 찾을 수 없습니다.</div>;
+    }
+  }
 
   return (
     <div className="min-h-screen flex flex-col main-page justify-center items-center">

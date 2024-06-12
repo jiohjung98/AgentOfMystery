@@ -75,3 +75,16 @@ body {
 .button:hover {
   background-color: #555;
 }
+
+.result-page {
+  background-image: url('/background-result.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
