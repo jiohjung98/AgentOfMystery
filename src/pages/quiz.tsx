@@ -73,7 +73,7 @@ const Quiz = () => {
       <Head>
         <title>Agent of Mystery - 퀴즈</title>
         <meta name="description" content="Your description here" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="preload" href="/background-main.png" as="image" />
       </Head>
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
