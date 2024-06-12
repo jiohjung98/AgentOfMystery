@@ -6,15 +6,53 @@ interface Props {
 
 const Question3: React.FC<Props> = ({ handleAnswerSelect }) => {
   return (
-    <>
-      <h1>Q3. 문제 해결에 한창인 도중, 동료가 아닌 낯선 인기척이 느껴졌다!<br/>낯선 사람의 발소리가 점점 커지는데! 긴박한 순간, 나는...</h1>
-      <button onClick={() => handleAnswerSelect('혜리')}>허둥지둥 대다 결국 숨지 못한다.</button>
-      <button onClick={() => handleAnswerSelect('존박')}>멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다. </button>
-      <button onClick={() => handleAnswerSelect('도훈')}>문 틈 사이에 낀 손가락, 어설프게 숨는다.</button>
-      <button onClick={() => handleAnswerSelect('은지')}>불안한 마음에 몸이 얼어붙는다.</button>
-      <button onClick={() => handleAnswerSelect('카리나')}>가장 가까운 공간으로 재빨리 몸을 숨긴다.</button>
-      <button onClick={() => handleAnswerSelect('용진')}>긴박한 순간에서도 동료들의 안전을 살핀다.</button>
-    </>
+    <div className="flex flex-col items-center rounded-lg">
+      <div className="text-center mb-6">
+        <h1 className="text-white text-4xl font-bold mb-4">Q.3</h1>
+        <p className="text-white text-xl leading-relaxed">
+          문제 해결에 한창인 도중,<br/>동료가 아닌 낯선 인기척이 느껴졌다! <br />
+          낯선 사람의 발소리가 점점 커지는데!<br/>긴박한 순간, 나는...
+        </p>
+      </div>
+      <div className="space-y-4 w-full">
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('혜리')}
+        >
+          ① 허둥지둥 대다 결국 숨지 못한다.
+        </button>
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('존박')}
+        >
+          ② 멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다.
+        </button>
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('도훈')}
+        >
+          ③ 문 틈 사이에 낀 손가락, 어설프게 숨는다.
+        </button>
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('은지')}
+        >
+          ④ 불안한 마음에 몸이 얼어붙는다.
+        </button>
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('카리나')}
+        >
+          ⑤ 가장 가까운 공간으로 재빨리 몸을 숨긴다.
+        </button>
+        <button
+          className="bg-white text-black text-lg py-3 px-6 rounded-lg w-full text-left"
+          onClick={() => handleAnswerSelect('용진')}
+        >
+          ⑥ 긴박한 순간에서도 동료들의 안전을 살핀다.
+        </button>
+      </div>
+    </div>
   );
 };
 
