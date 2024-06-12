@@ -50,7 +50,7 @@ const Quiz = () => {
         {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
-      <footer className="text-center py-6 items-center">
+      <footer className="text-center pb-6 items-center">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
       </footer>
     </div>
