@@ -21,6 +21,7 @@ const Home = () => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap"
         />
+        <link rel="preload" href="/background-start.png" as="image" />
       </Head>
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
@@ -44,7 +45,7 @@ const Home = () => {
           </div>
         )}
       <footer className="text-center pb-6 items-center">
-        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='eager' />
       </footer>
     </div>
   );

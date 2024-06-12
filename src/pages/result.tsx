@@ -5,6 +5,7 @@ import DoHunResult from '@/components/result/DoHunResult';
 import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
+import Head from 'next/head';
 
 const Result = () => {
   const router = useRouter();
@@ -32,7 +33,11 @@ const Result = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center result-page">
       {renderResultComponent()}
+      <Head>
+        <link rel="preload" href="/background-result.png" as="image" />
+      </Head>
     </div>
+    
   );
 };
 
