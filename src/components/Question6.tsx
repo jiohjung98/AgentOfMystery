@@ -1,0 +1,21 @@
+import React from 'react';
+
+interface Props {
+  handleAnswerSelect: (character: string) => void;
+}
+
+const Question6: React.FC<Props> = ({ handleAnswerSelect }) => {
+  return (
+    <>
+      <h1>Q6. 사라진 실종자 6명을 찾고 있는 미스터리 수사단!<br/>다음 장소로 이동하려고 문을 열었는데, 복도에 시체 한 구가 널브러져 있었다.<br/>자세히 보니 머리 없는 시체…?! 이 때 나는…</h1>
+      <button onClick={() => handleAnswerSelect('혜리')}>왜 시체에 머리가 없는지 생각해본다. “폭발 사고가 있었나?"</button>
+      <button onClick={() => handleAnswerSelect('존박')}>놀랐지만 어떤 상황인지 조용히 파악해본다. “...”</button>
+      <button onClick={() => handleAnswerSelect('도훈')}>동료들이 이동할 수 있게 시체를 밖으로 치운다. “읏차-”</button>
+      <button onClick={() => handleAnswerSelect('은지')}>시체를 보자마자 눈물이 쏟아질 것 같다. “이게 무슨 일이니..."</button>
+      <button onClick={() => handleAnswerSelect('카리나')}>시체 옷을 뒤져서 발견한 물품을 챙겨둔다. “혹시 모르니까~”</button>
+      <button onClick={() => handleAnswerSelect('용진')}>찾고 있는 실종자와 시체의 신원을 대조해본다. “어?! 이 사람은-!”</button>
+    </>
+  );
+};
+
+export default Question6;
