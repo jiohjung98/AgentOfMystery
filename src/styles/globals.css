@@ -31,3 +31,25 @@ body {
     text-wrap: balance;
   }
 }
+
+.background-image {
+  background-image: url('/background-start.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.custom-font {
+  font-family: 'YourFontName', sans-serif; 
+}
+
+.red-button {
+  background-color: #d91e18;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.red-button:hover {
+  background-color: #b01512;
+}

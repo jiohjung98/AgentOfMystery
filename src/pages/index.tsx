@@ -1,8 +1,7 @@
-// pages/index.js
-
 import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const Home = () => {
   const [startClicked, setStartClicked] = useState(false);
@@ -13,21 +12,40 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col background-image text-white custom-font">
       <Head>
         <title>Agent of Mystery</title>
         <meta name="description" content="Your description here" />
         <link rel="icon" href="/favicon.ico" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap"
+        />
       </Head>
-      <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl mb-4 whitespace-no-wrap">미스터리 수사단에 들어간다면?<br/>수사 성향 테스트!</h1>
-        <p className="text-sm md:text-lg lg:text-xl whitespace-no-wrap">미스터리 수사단의 일원이 된 당신!<br/>과학적으로 설명할 수 없는 특수한 사건들을 전담한다.<br/>당신과 수사 성향이 가장 비슷한 사람은?</p>
-        <div className="absolute bottom-0 text-white text-center py-6">
-        {!startClicked && (
-          <button onClick={handleStartClick} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">시작하기</button>
-        )}
-      </div>
+      <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 mt-20 text-center">
+        <h1 className="text-3xl md:text-3xl lg:text-4xl">
+          무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
+        </h1>
+        <p className="text-xl md:text-lg lg:text-xl leading-relaxed mt-8">
+          지구 상에서 일어나는 모든 미스터리한<br/>일들을 해결하는 비밀 조직 <span className="text-red-500">XIN</span>.<br />
+          인류가 지금까지 발견하지 못한<br/>X-전파를 통해 각종 사건을 수사한다.<br /><br/>
+          수사단 최정예 요원이 되기까지,<br/>마지막 한 단계만 남았다!<br />
+          현장에 투입된 나와 가장 닮은<br/>미스터리 수사단원은?
+        </p>
       </main>
+      {!startClicked && (
+        <div className='w-full px-6'>
+          <button
+            onClick={handleStartClick}
+            className="red-button w-full mb-8"
+          >
+            검증 미션 시작하기
+          </button>
+          </div>
+        )}
+      <footer className="text-center py-6 items-center">
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
+      </footer>
     </div>
   );
 };
