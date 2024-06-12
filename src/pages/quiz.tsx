@@ -1,4 +1,3 @@
-// pages/quiz.tsx
 import Head from 'next/head';
 import { useState } from 'react';
 import Question1 from '@/components/Question1';
@@ -8,6 +7,7 @@ import Question4 from '@/components/Question4';
 import Question5 from '@/components/Question5';
 import Question6 from '@/components/Question6';
 import Question7 from '@/components/Question7';
+import Image from 'next/image';
 
 type Score = {
   [key: string]: number;
@@ -35,7 +35,7 @@ const Quiz = () => {
   console.log(score);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center">
+    <div className="min-h-screen flex flex-col main-page justify-center items-center">
       <Head>
         <title>Agent of Mystery - 퀴즈</title>
         <meta name="description" content="Your description here" />
@@ -50,6 +50,9 @@ const Quiz = () => {
         {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
+      <footer className="text-center py-6 items-center">
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
+      </footer>
     </div>
   );
 };

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
@@ -32,7 +32,7 @@ body {
   }
 }
 
-.background-image {
+.start-page {
   background-image: url('/background-start.png');
   background-size: cover;
   background-position: center;
@@ -52,4 +52,26 @@ body {
 
 .red-button:hover {
   background-color: #b01512;
+}
+
+.main-page {
+  background-image: url('/background-main.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  text-align: left;
+}
+
+.button:hover {
+  background-color: #555;
 }

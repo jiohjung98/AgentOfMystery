@@ -12,7 +12,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col background-image text-white custom-font">
+    <div className="min-h-screen flex flex-col start-page text-white custom-font">
       <Head>
         <title>Agent of Mystery</title>
         <meta name="description" content="Your description here" />
