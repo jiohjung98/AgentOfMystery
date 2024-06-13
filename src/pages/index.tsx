@@ -49,15 +49,8 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           </button>
         </div>
       )}
-      <footer className="text-center pb-6 items-center z-[1]">
-        <Image 
-          src='/netflix-logo.png' 
-          alt='netflix' 
-          className='mx-auto' 
-          width={100} 
-          height={50} 
-          style={{ width: 'auto', height: 'auto' }} 
-        />
+        <footer className="text-center pb-6 items-center relative z-10">
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
       </footer>
     </div>
   );
