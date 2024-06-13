@@ -33,15 +33,28 @@ body {
 }
 
 .start-page {
+  position: relative;
   width: 100%;
   max-width: 500px;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
-  position: relative; 
+  text-align: center;
+  color: white;
+  font-family: 'YourFontName', sans-serif;
 }
+
+.start-background {
+  position: absolute;
+  inset: 0;
+  background-image: url('/background-start.avif');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
 
 .custom-font {
   font-family: 'YourFontName', sans-serif; 
