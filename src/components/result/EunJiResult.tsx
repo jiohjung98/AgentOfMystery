@@ -16,10 +16,10 @@ const EunJiResult: React.FC = () => {
         />
         <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
-            모르는 문제는 나에게 물어봐~ 수사단 브레인 은지
+          확신의 F형 인간! 감성적 보호자 은지
           </p>
           <p className="text-xs">
-            #브레인 #만능해결사 #척척박사 #추리_괴물
+          #공감왕 #긍정에너지 #서포터 #리액션부자
           </p>
         </div>
       </div>
@@ -27,35 +27,34 @@ const EunJiResult: React.FC = () => {
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">허당미</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="">담력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">☆☆☆☆☆</span>
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
+            <span className="">집중력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">추리력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="">허당미</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">집중력</span>
-          <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+          <span className="">공감능력</span>
+          <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
-        <p>- '행동파'보다는 '두뇌파'!</p>
-        <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
-        <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
-        <p>- 다른 동료들도 챙기는 세심함은 보너스!</p>
-        <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>
-        <p>- 승부욕이 없는 건 아님! 서바이벌에서 더욱 두각을 보이는 타입</p>
+        <p>- 촌철살인 리액션은 바로 공감과 이해에서부터 나온다</p>
+        <p>- 무서운 건 싫어ㅠㅠ 깜짝 놀라면 발 빠르게 도망가는 타입</p>
+        <p>- 공감 KING! 지친 동료들의 기운을 북돋아 줌</p>
+        <p>- 은근히 집중력이 좋아서 문제를 끝까지 풀어내려고 노력하는 스타일</p>
+        <p>- 물벼락을 맞아도 ‘럭키은지’잖아🍀 긍정에너지로 따라올 자가 없다</p>
       </div>
     </div>
   );

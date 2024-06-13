@@ -16,10 +16,10 @@ const KarinaResult: React.FC = () => {
         />
         <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
-            모르는 문제는 나에게 물어봐~ 수사단 브레인 카리나
+            없는 게 없다! 만능 주머니 탑재한 막냉이 카리나
           </p>
           <p className="text-xs">
-            #브레인 #만능해결사 #척척박사 #추리_괴물
+            #손_빠른_막내 #보부상 #확신의_사랑둥이
           </p>
         </div>
       </div>
@@ -27,35 +27,34 @@ const KarinaResult: React.FC = () => {
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">허당미</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="">담력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
+            <span className="">집중력</span>
             <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">추리력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="">순발력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">집중력</span>
-          <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+          <span className="">눈차</span>
+          <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
-        <p>- '행동파'보다는 '두뇌파'!</p>
-        <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
-        <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
-        <p>- 다른 동료들도 챙기는 세심함은 보너스!</p>
-        <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>
-        <p>- 승부욕이 없는 건 아님! 서바이벌에서 더욱 두각을 보이는 타입</p>
+        <p>- “제가 할게요” 눈치 빠른 성실한 막내</p>
+        <p>- 숨바꼭질 장인! 무서우면 누구보다 빠르게 숨어버림</p>
+        <p>- “이것도 필요할 것 같아…” 일단 가방에 넣고 보는 콜렉터!</p>
+        <p>- 조용히 있어도 모든 사람의 관심을 받는 존재감 강한 캐릭터</p>
+        <p>- 착한 얼굴에 그렇지 못한 눈빛. 의외로 용감한 면모를 가진 반전매력</p>
       </div>
     </div>
   );

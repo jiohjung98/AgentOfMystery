@@ -16,10 +16,10 @@ const HyeriResult: React.FC = () => {
         />
         <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
-            모르는 문제는 나에게 물어봐~ 수사단 브레인 혜리
+          탈출을 위한 덕목은 다 갖췄다 + 허당미는 덤! 혜리
           </p>
           <p className="text-xs">
-            #브레인 #만능해결사 #척척박사 #추리_괴물
+          방탈출_고인물 #감초역할 #못_먹어도_고!
           </p>
         </div>
       </div>
@@ -27,35 +27,34 @@ const HyeriResult: React.FC = () => {
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">허당미</span>
+            <span className="">담력</span>
             <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
+            <span className="">집중력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">추리력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="">허당미</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">집중력</span>
-          <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+          <span className="">협력</span>
+          <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
-        <p>- '행동파'보다는 '두뇌파'!</p>
-        <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
-        <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
-        <p>- 다른 동료들도 챙기는 세심함은 보너스!</p>
-        <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>
-        <p>- 승부욕이 없는 건 아님! 서바이벌에서 더욱 두각을 보이는 타입</p>
+        <p>- 상황의 인과관계를 파악하려고 노력함</p>
+        <p>- 꺅!! 깜짝 놀랄 상황에서는 앞장서기 보단, 뒤에서 빼꼼~?</p>
+        <p>- 방탈출 고인물 답게 늘 자신감 있는 태도로 임함</p>
+        <p>- 동료들의 의견에 귀를 잘 기울이고 협력하는 유형</p>
+        <p>- 단서를 수집할 때나, 문제를 해결하려고 할 때 귀여운 허당미도 뽐냄</p>
       </div>
     </div>
   );

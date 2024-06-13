@@ -16,10 +16,10 @@ const DoHunResult: React.FC = () => {
         />
         <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
-            모르는 문제는 나에게 물어봐~ 수사단 브레인 도훈
+          열정 하나로 문제를 풀어나간다! 열정맨 도훈
           </p>
           <p className="text-xs">
-            #브레인 #만능해결사 #척척박사 #추리_괴물
+          #의욕과다 #행동파 #호기심만땅 #과몰입형
           </p>
         </div>
       </div>
@@ -27,35 +27,35 @@ const DoHunResult: React.FC = () => {
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">허당미</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="">담력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
+            <span className="">집중력</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">추리력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="">차분함</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">집중력</span>
-          <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+          <span className="">궁금증</span>
+          <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
-        <p>- '행동파'보다는 '두뇌파'!</p>
-        <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
-        <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
-        <p>- 다른 동료들도 챙기는 세심함은 보너스!</p>
-        <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>
-        <p>- 승부욕이 없는 건 아님! 서바이벌에서 더욱 두각을 보이는 타입</p>
+        <p>- 생각할 시간에 행동 먼저! 시원시원한 액션이 눈에 띄는 행동파.</p>
+        <p>- 잘한다, 잘한다 하면 더 잘하는 사람.</p>
+        <p>- 불의는 못 참지! 정의의 사도.</p>
+        <p>- “이건 뭐지?, 저건 뭐지?” 신기함을 파헤치는 호기심왕</p>
+        <p>- 콜, 당근이지, 오키! 일단 YES하고 보는 스타일.</p>
+        <p>- 내 사주엔 화(火)가 제일 많을 거야. 답답한 건 싫은 화끈한 캐릭터!</p>
       </div>
     </div>
   );
