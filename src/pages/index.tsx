@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col start-page text-white custom-font">
       <Head>
-        <title>Agent of Mystery</title>
+        <title>미스터리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />
         <link rel="icon" href="/favicon.ico" />
         <link
