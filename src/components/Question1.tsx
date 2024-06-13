@@ -17,7 +17,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect }) => {
             불가사의하고 초자연적인 <br />
             미션을 해결해야 한다.
           </p>
-          <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+          <h2 className="text-white text-2xl font-bold my-4 text-center">
             이때 내가 되고 싶은 <br /> 수사단원은?
           </h2>
         </>

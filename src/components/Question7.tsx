@@ -29,7 +29,7 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect }) => {
         ① 직접 되돌아가는 방법을 찾는다.
       </button>
       <button
-        className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
+        className="bg-white text-black text-base py-2 pl-4 rounded-lg w-full text-left"
         onClick={() => handleAnswerSelect('존박')}
       >
         ② 다른 사람들과 함께 되돌아가는 방법을 찾는다.
@@ -53,7 +53,7 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect }) => {
         ⑤ 나의 아이디어를 제시하여 해결책을 찾는다.
       </button>
       <button
-        className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
+        className="bg-white text-black text-base py-2 pl-4 rounded-lg w-full text-left"
         onClick={() => handleAnswerSelect('용진')}
       >
         ⑥ 팀원들과 협력하여 가장 좋은 방법을 결정한다.

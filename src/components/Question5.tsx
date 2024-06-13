@@ -41,7 +41,7 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect }) => {
         ③ 어차피 다 같이 탈출할 거니까 기다린다.
       </button>
       <button
-        className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
+        className="bg-white text-black text-base py-2 pl-4 rounded-lg w-full text-left"
         onClick={() => handleAnswerSelect('은지')}
       >
         ④ 다른 사람들이 안전하게 탈출하도록 지원한다.

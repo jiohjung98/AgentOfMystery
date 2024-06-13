@@ -12,8 +12,8 @@ const QuestionLayout: React.FC<Props> = ({ questionNumber, questionText, childre
       <div className="fixed-header">
         {questionNumber}
       </div>
-      <div className="flex flex-col items-center rounded-lg mt-[70px]">
-        <div className="text-center mb-4">
+      <div className="flex flex-col items-center rounded-lg mt-[60px]">
+        <div className="text-center">
           {questionText}
         </div>
         <div className="space-y-4 w-full px-2">

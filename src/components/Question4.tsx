@@ -38,7 +38,7 @@ const Question4: React.FC<Props> = ({ handleAnswerSelect }) => {
         className="bg-white text-black text-base py-2 px-2 rounded-lg w-full text-left"
         onClick={() => handleAnswerSelect('도훈')}
       >
-        ③ 잠깐만! 누군가 우리를 지켜보고 있는 것 같지 않아?
+        ③ 잠깐만! 누군가 우리를 지켜보고 있는 것<br/>같지 않아?
       </button>
       <button
         className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
