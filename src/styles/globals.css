@@ -115,7 +115,9 @@ body {
 .fixed-header {
   position: absolute;
   top: 30px;
-  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 100;
   text-align: center;
   font-size: 2rem;

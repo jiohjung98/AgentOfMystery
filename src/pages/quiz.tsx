@@ -7,12 +7,6 @@ import Question4 from '@/components/Question4';
 import Question5 from '@/components/Question5';
 import Question6 from '@/components/Question6';
 import Question7 from '@/components/Question7';
-import HyeriResult from '@/components/result/HyeriResult';
-import JohnParkResult from '@/components/result/JohnParkResult';
-import DoHunResult from '@/components/result/DoHunResult';
-import EunJiResult from '@/components/result/EunJiResult';
-import KarinaResult from '@/components/result/KarinaResult';
-import YongJinResult from '@/components/result/YongJinResult';
 import Image from 'next/image';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
@@ -65,13 +59,13 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
       </Head>
       <Background backgroundUrl={backgroundUrl} />
       <main className="flex-grow flex flex-col items-center h-[100%] px-4 pt-4 text-center relative z-10">
-        {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 4 && <Question4 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 5 && <Question5 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} />}
-        {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
+        {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 4 && <Question4 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 5 && <Question5 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
       </main>
       <footer className="text-center py-4 items-center relative z-10">
         <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />

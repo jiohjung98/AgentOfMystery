@@ -29,7 +29,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
       </Head>
       <Background backgroundUrl={backgroundUrl} />
       <main className="flex-grow flex flex-col h-full items-center mx-auto px-4 py-4 mt-[140px] text-center z-[1]">
-        <h1 className="text-3xl">
+        <h1 className="text-3xl mt-[10px]">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
         </h1>
         <p className="text-lg leading-relaxed mt-8 font-weight">
