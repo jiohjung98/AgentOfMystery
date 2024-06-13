@@ -24,16 +24,13 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    font-family: var(--font-hggothicssi);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
-
-.custom-font {
-  font-family: 'YourFontName', sans-serif; 
 }
 
 .red-button {
@@ -57,7 +54,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  font-family: 'YourFontName', sans-serif;
 }
 
 .start-background {
@@ -76,7 +72,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  font-family: 'YourFontName', sans-serif;
 }
 
 .main-background {
@@ -84,7 +79,6 @@ body {
   inset: 0;
   z-index: -1;
 }
-
 
 .button {
   background-color: #333;

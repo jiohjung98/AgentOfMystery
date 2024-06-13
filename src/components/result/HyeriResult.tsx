@@ -3,7 +3,7 @@ import React from 'react';
 
 const HyeriResult: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col result-page text-white custom-font">
+    <div className="min-h-screen flex flex-col result-page text-white ">
          <div className="absolute inset-0 z-0">
             <Image
             src="/background-result.png"
