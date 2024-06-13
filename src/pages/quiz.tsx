@@ -76,7 +76,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
         <meta name="description" content="Your description here" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="flex-grow flex flex-col items-center h-[100%] px-4 py-4 text-center relative z-10">
+      <main className="flex-grow flex flex-col items-center h-[100%] px-4 pt-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} />}
@@ -85,7 +85,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
         {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
-      <footer className="text-center pb-6 items-center relative z-10">
+      <footer className="text-center py-4 items-center relative z-10">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
       </footer>
     </div>

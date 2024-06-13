@@ -43,13 +43,13 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         <div className='w-full px-6 z-[1]'>
           <button
             onClick={handleStartClick}
-            className="red-button w-full mb-4"
+            className="red-button w-[90%]"
           >
             검증 미션 시작하기
           </button>
         </div>
       )}
-        <footer className="absoulte bottom-0 text-center pb-6 items-center z-10">
+        <footer className="absoulte bottom-0 text-center py-4 items-center z-10">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
       </footer>
     </div>
