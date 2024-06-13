@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 
@@ -31,8 +31,6 @@ const Quiz = () => {
     카리나: 0,
     용진: 0,
   });
-
-  console.log(score);
 
   const handleAnswerSelect = (character: string) => {
     setScore((prevScore) => ({
@@ -75,7 +73,17 @@ const Quiz = () => {
         <meta name="description" content="Your description here" />
         <link rel="preload" href="/background-main.png" as="image" />
       </Head>
-      <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/background-main.png"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
+      </div>
+      <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} />}
@@ -84,7 +92,7 @@ const Quiz = () => {
         {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
-      <footer className="text-center pb-6 items-center">
+      <footer className="text-center pb-6 items-center relative z-10">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
       </footer>
     </div>
