@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import Image from 'next/image';
-
+import Background from '@/components/Background';
 import Question1 from '@/components/Question1';
 import Question2 from '@/components/Question2';
 import Question3 from '@/components/Question3';
@@ -15,12 +14,17 @@ import DoHunResult from '@/components/result/DoHunResult';
 import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
+import Image from 'next/image';
 
 type Score = {
   [key: string]: number;
 };
 
-const Quiz = () => {
+type QuizProps = {
+  backgroundUrl: string;
+};
+
+const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
   const [currentQuestion, setCurrentQuestion] = useState(1);
   const [score, setScore] = useState<Score>({
     혜리: 0,
@@ -30,8 +34,6 @@ const Quiz = () => {
     카리나: 0,
     용진: 0,
   });
-
-  console.log(score);
 
   const handleAnswerSelect = (character: string) => {
     setScore((prevScore) => ({
@@ -72,17 +74,8 @@ const Quiz = () => {
       <Head>
         <title>미스테리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />
-        {/* <link rel="preload" href="/background-main.avif" as="image" /> */}
       </Head>
-      <div className="absolute inset-0 z-0 main-background">
-        <Image
-          src="/background-main.png"
-          alt="Background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
-      </div>
+      <Background backgroundUrl={backgroundUrl} />
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
@@ -97,6 +90,16 @@ const Quiz = () => {
       </footer>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const backgroundUrl = '/background-main.png';
+
+  return {
+    props: {
+      backgroundUrl,
+    },
+  };
 };
 
 export default Quiz;

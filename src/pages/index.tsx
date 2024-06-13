@@ -1,9 +1,14 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Background from '@/components/Background';
 import Image from 'next/image';
 
-const Home = () => {
+type HomeProps = {
+  backgroundUrl: string;
+};
+
+const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
   const [startClicked, setStartClicked] = useState(false);
   const router = useRouter();
 
@@ -22,16 +27,7 @@ const Home = () => {
         <meta property="og:url" content="https://agent-of-mystery.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="absolute inset-0 z-0 start-background">
-        <Image
-          src="/background-start.avif"
-          alt="Background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
-        
-      </div>
+      <Background backgroundUrl={backgroundUrl} />
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center z-[1]">
         <h1 className="text-3xl">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
@@ -65,6 +61,16 @@ const Home = () => {
       </footer>
     </div>
   );
+};
+
+export const getServerSideProps = async () => {
+  const backgroundUrl = '/background-start.avif';
+
+  return {
+    props: {
+      backgroundUrl,
+    },
+  };
 };
 
 export default Home;
