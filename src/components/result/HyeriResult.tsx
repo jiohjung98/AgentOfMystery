@@ -19,7 +19,7 @@ const HyeriResult: React.FC = () => {
           탈출을 위한 덕목은 다 갖췄다 + 허당미는 덤! 혜리
           </p>
           <p className="text-xs">
-          방탈출_고인물 #감초역할 #못_먹어도_고!
+          #방탈출_고인물 #감초역할 #못_먹어도_고!
           </p>
         </div>
       </div>
