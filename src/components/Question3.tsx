@@ -65,7 +65,7 @@ const getButtonText = (character: string) => {
     case '혜리':
       return '① 허둥지둥 대다 결국 숨지 못한다.';
     case '존박':
-      return '② 멀어도 가장 안심할 수 있는 확실한<br/>공간으로 몸을 숨긴다.';
+      return '② 멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다.';
     case '도훈':
       return '③ 문 틈 사이에 낀 손가락, 어설프게 숨는다.';
     case '은지':

@@ -32,7 +32,7 @@ const Question4: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                 <p className="text-white text-sm leading-relaxed">
                   수사 도중 비밀의 방을 발견한 미스터리 수사단!<br />
                   비밀의 방 앞에 있는 의문의 버튼을 발견한다.<br />
-                  누르면 들어갈 수 있는 건가…?
+                  누르면 들어갈 수 있는 건가...?
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
                   이때 나는 어떻게 해야 할까?
@@ -68,9 +68,9 @@ const getButtonText = (character: string) => {
     case '존박':
       return '② 버튼 누르기 전에 한 명이 망보고 있자.';
     case '도훈':
-      return '③ 잠깐만! 누군가 우리를 지켜보고 있는 것<br/>같지 않아?';
+      return '③ 잠깐만! 누군가 우리를 지켜보고 있는 것 같지 않아?';
     case '은지':
-      return '④ 누르지 말자…ㅠㅠ 누를 거면 나는 빼줘...';
+      return '④ 누르지 말자...ㅠㅠ 누를 거면 나는 빼줘...';
     case '카리나':
       return '⑤ 다들 어떻게 생각해? 난 상관없어.';
     case '용진':

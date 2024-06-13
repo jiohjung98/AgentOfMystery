@@ -26,7 +26,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
       setTimeout(() => {
         setShowResult(true); 
       }, 1000); 
-    }, 5000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -55,7 +55,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
       <Head>
         <title>나와 가장 어울리는 수사단원은?</title>
         <meta name="description" content="검증 결과 페이지" />
-        <link rel="preload" href="/background-result.png" as="image" />
+        <link rel="preload" href="/background-result.avif" as="image" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
       <main className="relative flex-grow flex flex-col items-center w-full px-4 text-center z-10">

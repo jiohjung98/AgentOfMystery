@@ -30,12 +30,12 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             questionText={
               <>
                 <p className="text-white text-sm leading-relaxed">
-                  비밀의 방 속에 갇힌 미스터리 수사단!<br />
-                  탈출을 도와줄 단서를 찾았다.<br />
-                  그런데 단서를 발견한 장소는 위험하다.
+                  고지가 눈앞! 이제 탈출만 남은 상황이다.<br />
+                  그 순간, 범인이 들이닥쳤다!<br />
+                  범인들에게 순식간에 포위된 미스터리 수사단.
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
-                  단서를 얻기 위해 내가 할 행동은?
+                끌려가기 일보직전인 지금,<br/>가장 먼저 드는 생각은?
                 </h2>
               </>
             }
@@ -64,17 +64,17 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 위험을 감수하고 단서를 챙긴다.';
+      return '① 이정도 시련쯤이야, 얼른 탈출할 수 있어!';
     case '존박':
-      return '② 모두의 안전을 위해 단서를 포기한다.';
+      return '② 이게 무슨 상황이지…?';
     case '도훈':
-      return '③ 어차피 다 같이 탈출할 거니까 기다린다.';
+      return '③ 아니 이걸 걸렸다고? 아 진짜 아쉽다...';
     case '은지':
-      return '④ 다른 사람들이 안전하게 탈출하도록 지원한다.';
+      return '④ 다른 동료들은 괜찮나?';
     case '카리나':
-      return '⑤ 나의 특기를 활용해 안전하게 단서를 챙긴다.';
+      return '⑤ 살려주세요 살려주세요 (멘붕으로 사고력 정지)';
     case '용진':
-      return '⑥ 단서를 챙기기 위해 계획적으로 행동한다.';
+      return '⑥ 미운 놈 떡 하나 더 줄 수 있으니 대화를 시도해볼까?';
     default:
       return '';
   }

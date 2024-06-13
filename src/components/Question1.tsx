@@ -65,17 +65,17 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 현장을 정리하고 증거를 수집한다.';
+      return '① 적극적인 태도가 돋보이는 노력파';
     case '존박':
-      return '② 피해자의 상태를 확인한다.';
+      return '② 어떤 문제든 척척 풀어내는 브레인';
     case '도훈':
-      return '③ 주변 사람들에게 질문을 던진다.';
+      return '③ 열정만큼 몸부터 앞서는 행동파';
     case '은지':
-      return '④ 사건을 해결할 단서를 찾아 나선다.';
+      return '④ 공감능력 탑재한 분위기 메이커';
     case '카리나':
-      return '⑤ 팀원들과 작전을 세운다.';
+      return '⑤ 없는 게 없는 보부상';
     case '용진':
-      return '⑥ 경찰에 연락하여 지원을 요청한다.';
+      return '⑥ 모두가 기댈 수 있는 리더';
     default:
       return '';
   }

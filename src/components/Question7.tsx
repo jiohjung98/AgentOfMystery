@@ -30,12 +30,12 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             questionText={
               <>
                 <p className="text-white text-sm leading-relaxed">
-                  비밀의 방에서 탈출한 후,<br />
-                  다시 되돌아가기 위한 길이 막혔다!<br />
-                  다시 되돌아가기 위한 방법은?
+                  심해 깊은 곳에 있는 잠수함으로 수사를 하러 갔다.<br />
+                  그런데, 갑자기 여기저기서 울리는 사이렌!<br />
+                  어어… 어….? 갑자기 잠수함이 기울어진다!
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
-                  나의 선택은?
+                이때 나는...
                 </h2>
               </>
             }
@@ -64,17 +64,17 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 직접 되돌아가는 방법을 찾는다.';
+      return '① 이 상황을 해결하기 위해, 앞서 찍어뒀던 단서들을 꺼내본다.';
     case '존박':
-      return '② 다른 사람들과 함께 되돌아가는 방법을 찾는다.';
+      return '② 반대편으로 미끄러지는 친구를 긴 팔로 붙잡아준다.';
     case '도훈':
-      return '③ 어떻게든 되돌아가는 방법을 찾는다.';
+      return '③ 생각할 시간은 없어! 일단 눈 앞에 보이는 밸브를 돌려본다.';
     case '은지':
-      return '④ 동료들과 함께 논의하여 결정한다.';
+      return '④ 얘들아, 괜찮아? 빨리 안전바 잡아! 나도 힘들지만 동료들의 안전을 챙겨준다.';
     case '카리나':
-      return '⑤ 나의 아이디어를 제시하여 해결책을 찾는다.';
+      return '⑤ ...이게 무슨 일이지? 몸을 움츠리고 멍하니 상황을 바라본다.';
     case '용진':
-      return '⑥ 팀원들과 협력하여 가장 좋은 방법을 결정한다.';
+      return '⑥ 일단 밸브를 오른쪽으로 돌려 봐! 상황을 전달해준다.';
     default:
       return '';
   }
