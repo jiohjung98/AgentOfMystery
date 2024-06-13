@@ -58,6 +58,9 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
           {renderResultComponent()}
         </div>
       </main>
+      <footer className="text-center py-4 items-center relative z-10">
+        <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
+      </footer>
     </div>
   );
 };

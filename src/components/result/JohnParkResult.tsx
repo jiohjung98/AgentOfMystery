@@ -49,7 +49,7 @@ const JohnParkResult: React.FC = () => {
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
         </div>
       </div>
-      <div className="w-full text-left text-sm relative z-30">
+      <div className="w-full text-left text-sm relative top-[-30px] z-30">
         <p>- '행동파'보다는 '두뇌파'!</p>
         <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
         <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
