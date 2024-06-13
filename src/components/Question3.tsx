@@ -31,7 +31,7 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect }) => {
         className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
         onClick={() => handleAnswerSelect('존박')}
       >
-        ② 멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다.
+        ② 멀어도 가장 안심할 수 있는 확실한<br/>공간으로 몸을 숨긴다.
       </button>
       <button
         className="bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left"
