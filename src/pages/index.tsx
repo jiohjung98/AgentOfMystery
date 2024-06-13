@@ -23,7 +23,17 @@ const Home = () => {
         />
         <link rel="preload" href="/background-start.png" as="image" />
       </Head>
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center">
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/background-start.png"
+          alt="Background"
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority
+        />
+      </div>
+      <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center z-[1]">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
         </h1>
@@ -35,7 +45,7 @@ const Home = () => {
         </p>
       </main>
       {!startClicked && (
-        <div className='w-full px-6'>
+        <div className='w-full px-6 z-[1]'>
           <button
             onClick={handleStartClick}
             className="red-button w-full mb-4"
