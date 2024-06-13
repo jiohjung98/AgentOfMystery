@@ -36,7 +36,7 @@ const Home = () => {
         <h1 className="text-3xl">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
         </h1>
-        <p className="text-lg leading-relaxed mt-8">
+        <p className="text-lg leading-relaxed mt-8 font-weight">
           지구 상에서 일어나는 모든 미스터리한<br/>일들을 해결하는 비밀 조직 <span className="text-red-500">XIN</span>.<br />
           인류가 지금까지 발견하지 못한<br/>X-전파를 통해 각종 사건을 수사한다.<br /><br/>
           수사단 최정예 요원이 되기까지,<br/>마지막 한 단계만 남았다!<br />
