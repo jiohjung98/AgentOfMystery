@@ -28,7 +28,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center z-[1]">
+      <main className="flex-grow flex flex-col h-full items-center mx-auto px-4 py-4 mt-[140px] text-center z-[1]">
         <h1 className="text-3xl">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
         </h1>
@@ -49,7 +49,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           </button>
         </div>
       )}
-        <footer className="text-center pb-6 items-center relative z-10">
+        <footer className="absoulte bottom-0 text-center pb-6 items-center z-10">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
       </footer>
     </div>
