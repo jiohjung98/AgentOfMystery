@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { useState } from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 
 import Question1 from '@/components/Question1';
@@ -31,6 +30,8 @@ const Quiz = () => {
     카리나: 0,
     용진: 0,
   });
+
+  console.log(score);
 
   const handleAnswerSelect = (character: string) => {
     setScore((prevScore) => ({
@@ -71,18 +72,9 @@ const Quiz = () => {
       <Head>
         <title>미스테리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />
-        <link rel="preload" href="/background-main.png" as="image" />
+        <link rel="preload" href="/background-main.avif" as="image" />
       </Head>
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/background-main.png"
-          alt="Background"
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority
-        />
-      </div>
+      <div className="absolute inset-0 z-0 main-background"></div>
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
@@ -93,7 +85,7 @@ const Quiz = () => {
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
       <footer className="text-center pb-6 items-center relative z-10">
-        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy'></Image>
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
       </footer>
     </div>
   );
