@@ -76,7 +76,7 @@ const Quiz = () => {
       </Head>
       <div className="absolute inset-0 z-0 main-background">
         <Image
-          src="/background-main.avif"
+          src="/background-main.png"
           alt="Background"
           fill
           style={{ objectFit: 'cover' }}
