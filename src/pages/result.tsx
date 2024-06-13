@@ -6,6 +6,7 @@ import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const Result = () => {
   const router = useRouter();
@@ -32,6 +33,15 @@ const Result = () => {
 
   return (
     <div className="max-w-[500px] min-h-screen flex flex-col justify-center items-center result-page mx-auto">
+        <div className="absolute inset-0 z-0 result-background">
+        <Image
+          src="/background-result.avif"
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+      </div>
       {renderResultComponent()}
       <Head>
         <link rel="preload" href="/background-result.png" as="image" />
