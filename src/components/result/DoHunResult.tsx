@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-const DoHunResult: React.FC = () => {
+type DoHunResultProps = {
+  show: boolean;
+};
+
+const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">도훈</h1>
         <Image
@@ -57,6 +61,12 @@ const DoHunResult: React.FC = () => {
         <p>- 콜, 당근이지, 오키! 일단 YES하고 보는 스타일.</p>
         <p>- 내 사주엔 화(火)가 제일 많을 거야. 답답한 건 싫은 화끈한 캐릭터!</p>
       </div>
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };

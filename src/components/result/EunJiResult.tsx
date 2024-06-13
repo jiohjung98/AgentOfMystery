@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-const EunJiResult: React.FC = () => {
+type EunJiResultProps = {
+  show: boolean;
+};
+
+const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">은지</h1>
         <Image
@@ -56,6 +60,12 @@ const EunJiResult: React.FC = () => {
         <p>- 은근히 집중력이 좋아서 문제를 끝까지 풀어내려고 노력하는 스타일</p>
         <p>- 물벼락을 맞아도 ‘럭키은지’잖아🍀 긍정에너지로 따라올 자가 없다</p>
       </div>
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };

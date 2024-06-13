@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-const KarinaResult: React.FC = () => {
+type DoHunResultProps = {
+  show: boolean;
+};
+
+const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">카리나</h1>
         <Image
@@ -56,6 +60,12 @@ const KarinaResult: React.FC = () => {
         <p>- 조용히 있어도 모든 사람의 관심을 받는 존재감 강한 캐릭터</p>
         <p>- 착한 얼굴에 그렇지 못한 눈빛. 의외로 용감한 면모를 가진 반전매력</p>
       </div>
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };

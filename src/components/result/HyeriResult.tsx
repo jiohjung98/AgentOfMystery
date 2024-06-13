@@ -1,9 +1,13 @@
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
 
-const HyeriResult: React.FC = () => {
+type HyeriResultProps = {
+  show: boolean;
+};
+
+const HyeriResult: React.FC<HyeriResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">혜리</h1>
         <Image
@@ -16,10 +20,10 @@ const HyeriResult: React.FC = () => {
         />
         <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
-          탈출을 위한 덕목은 다 갖췄다 + 허당미는 덤! 혜리
+            탈출을 위한 덕목은 다 갖췄다 + 허당미는 덤! 혜리
           </p>
           <p className="text-xs">
-          #방탈출_고인물 #감초역할 #못_먹어도_고!
+            #방탈출_고인물 #감초역할 #못_먹어도_고!
           </p>
         </div>
       </div>
@@ -56,6 +60,13 @@ const HyeriResult: React.FC = () => {
         <p>- 동료들의 의견에 귀를 잘 기울이고 협력하는 유형</p>
         <p>- 단서를 수집할 때나, 문제를 해결하려고 할 때 귀여운 허당미도 뽐냄</p>
       </div>
+
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };

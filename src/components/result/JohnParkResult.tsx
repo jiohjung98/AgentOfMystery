@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-const JohnParkResult: React.FC = () => {
+type JohnParkResultProps = {
+  show: boolean;
+};
+
+const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">존 박</h1>
         <Image
@@ -57,6 +61,12 @@ const JohnParkResult: React.FC = () => {
         <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>
         <p>- 승부욕이 없는 건 아님! 서바이벌에서 더욱 두각을 보이는 타입</p>
       </div>
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };

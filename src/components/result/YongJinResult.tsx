@@ -1,9 +1,13 @@
 import Image from 'next/image';
 import React from 'react';
 
-const YongJinResult: React.FC = () => {
+type YongJinResultProps = {
+  show: boolean;
+};
+
+const YongJinResult: React.FC<YongJinResultProps> = ({ show }) => {
   return (
-    <div className="flex flex-col result-page text-white relative">
+    <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">용진</h1>
         <Image
@@ -56,6 +60,12 @@ const YongJinResult: React.FC = () => {
         <p>- 부드러운 카리스마로 동료들을 잘 이끄는 리더형</p>
         <p>- 심각한 상황에서도 웃음 한 스푼~ 없어서는 안 될 분위기메이커!</p>
       </div>
+      <style jsx>{`
+        .fade-in {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+        }
+      `}</style>
     </div>
   );
 };
