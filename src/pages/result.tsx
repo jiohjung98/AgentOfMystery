@@ -6,9 +6,14 @@ import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
 import Head from 'next/head';
+import Background from '@/components/Background';
 import Image from 'next/image';
 
-const Result = () => {
+type ResultsProps = {
+  backgroundUrl: string;
+};
+
+const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
   const router = useRouter();
   const { character } = router.query;
 
@@ -32,23 +37,39 @@ const Result = () => {
   };
 
   return (
-    <div className="max-w-[500px] min-h-screen flex flex-col justify-center items-center result-page mx-auto">
-        <div className="absolute inset-0 z-0 result-background">
-        <Image
-          src="/background-result.avif"
-          alt="Background"
-          fill
-          style={{ objectFit: 'cover' }}
-          priority
-        />
-      </div>
-      {renderResultComponent()}
+    <div className="max-w-[500px] flex flex-col justify-center items-center result-page mx-auto">
       <Head>
+        <title>나와 가장 어울리는 수사단원은?</title>
+        <meta name="description" content="검증 결과 페이지" />
         <link rel="preload" href="/background-result.png" as="image" />
       </Head>
+      <Background backgroundUrl={backgroundUrl} />
+      <main className="relative flex-grow flex flex-col items-center h-[100%] px-4 text-center z-10">
+        <div className="absolute z-20">
+          <Image
+            src="/result-paper.png"
+            alt="result"
+            width={200}
+            height={50}
+            priority
+          />
+        </div>
+        <div className="relative">
+          {renderResultComponent()}
+        </div>
+      </main>
     </div>
-    
   );
+};
+
+export const getServerSideProps = async () => {
+  const backgroundUrl = '/background-result.avif';
+
+  return {
+    props: {
+      backgroundUrl,
+    },
+  };
 };
 
 export default Result;

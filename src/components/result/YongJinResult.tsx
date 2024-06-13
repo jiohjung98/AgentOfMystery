@@ -5,13 +5,13 @@ const YongJinResult: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col result-page text-white">
         <div className="absolute inset-0 z-0 result-background">
-        <Image
+        {/* <Image
           src="/background-result.avif"
           alt="Background"
           fill
           style={{ objectFit: 'cover' }}
           priority
-        />
+        /> */}
         </div>
         <div className="absolute top-[20px]">
             <Image

@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useState } from 'react';
 import Background from '@/components/Background';
 import Question1 from '@/components/Question1';
@@ -15,6 +14,8 @@ import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
 import Image from 'next/image';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 type Score = {
   [key: string]: number;
@@ -35,6 +36,8 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
     용진: 0,
   });
 
+  const router = useRouter();
+
   const handleAnswerSelect = (character: string) => {
     setScore((prevScore) => ({
       ...prevScore,
@@ -51,22 +54,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
 
   if (currentQuestion > 7) {
     const maxCharacter = getMaxCharacter();
-    switch (maxCharacter) {
-      case '혜리':
-        return <HyeriResult />;
-      case '존박':
-        return <JohnParkResult />;
-      case '도훈':
-        return <DoHunResult />;
-      case '은지':
-        return <EunJiResult />;
-      case '카리나':
-        return <KarinaResult />;
-      case '용진':
-        return <YongJinResult />;
-      default:
-        return <div>결과를 찾을 수 없습니다.</div>;
-    }
+    router.push(`/result?character=${maxCharacter}`);
   }
 
   return (
@@ -86,7 +74,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
       <footer className="text-center py-4 items-center relative z-10">
-        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
+        <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
       </footer>
     </div>
   );
