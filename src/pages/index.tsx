@@ -12,7 +12,7 @@ const Home = () => {
   };
 
   return (
-    <div className="max-w-[500px] min-h-screen flex flex-col start-page text-white mx-auto">
+    <div className="max-w-[500px] min-h-screen flex flex-col start-page text-white mx-auto start-font">
       <Head>
         <title>미스터리 수사단원 검증 미션</title>
         <meta name="description" content="Agent Of Mystery" />
@@ -21,7 +21,6 @@ const Home = () => {
         <meta property="og:image" content="/mainlogo2.png" />
         <meta property="og:url" content="https://agent-of-mystery.vercel.app/" />
         <link rel="icon" href="/favicon.ico" />
-        {/* <link rel="preload" href="/background-start.avif" as="image" /> */}
       </Head>
       <div className="absolute inset-0 z-0 start-background">
         <Image

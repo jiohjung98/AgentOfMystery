@@ -30,9 +30,14 @@ const hggothicssi = localFont({
   variable: '--font-hggothicssi',
 });
 
+const myFont = localFont({
+  src: '../font/HGGothicssi_80g.ttf',
+  display: 'swap',
+});
+
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <div className={hggothicssi.variable}>
+    <div className={myFont.className}>
       <Component {...pageProps} />
     </div>
   );
