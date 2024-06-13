@@ -50,7 +50,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         </div>
       )}
         <footer className="absoulte bottom-0 text-center py-4 items-center z-10">
-        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
       </footer>
     </div>
   );

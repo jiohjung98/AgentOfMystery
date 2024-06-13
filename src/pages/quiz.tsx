@@ -86,7 +86,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
         {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} />}
       </main>
       <footer className="text-center py-4 items-center relative z-10">
-        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} loading='lazy' />
+        <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
       </footer>
     </div>
   );
