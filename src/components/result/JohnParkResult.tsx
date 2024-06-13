@@ -13,8 +13,20 @@ const JohnParkResult: React.FC = () => {
           priority
         />
       </div>
-      <h1 className="text-4xl font-bold text-black">존박</h1>
-      <p className="mt-4">당신은 적극적인 태도가 돋보이는 노력파입니다!</p>
+      <div className="absolute top-[20px]">
+            <Image
+                src="/result-paper.png"
+                alt="result"
+                width={200}
+                height={100}
+                priority
+                className='z-[100]'
+            />
+        </div>
+        <div className="absolute top-[67px]">
+      <h1 className="text-4xl font-bold text-white">존박</h1>
+      </div>
+      <p className="mt-40">당신은 적극적인 태도가 돋보이는 노력파입니다!</p>
     </div>
   );
 };
