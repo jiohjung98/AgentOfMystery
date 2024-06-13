@@ -60,7 +60,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
       </main>
       {!startClicked && (
         <motion.div
-          className="absolute bottom-20 w-full px-6 z-[1]"
+          className="absolute bottom-16 w-full px-6 z-[1]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isContentVisible ? 1 : 0, y: isContentVisible ? 0 : 50 }}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -74,7 +74,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           </button>
         </motion.div>
       )}
-      <footer className="absolute bottom-0 text-center py-4 items-center z-10 w-full">
+      <footer className="absolute bottom-0 text-center pb-4 items-center z-10 w-full">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
       </footer>
     </div>
