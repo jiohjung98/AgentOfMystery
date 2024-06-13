@@ -71,7 +71,7 @@ const Quiz = () => {
   return (
     <div className="min-h-screen flex flex-col main-page justify-center items-center">
       <Head>
-        <title>Agent of Mystery - 퀴즈</title>
+        <title>미스테리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />
         <link rel="preload" href="/background-main.png" as="image" />
       </Head>
