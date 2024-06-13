@@ -32,6 +32,21 @@ body {
   }
 }
 
+.custom-font {
+  font-family: 'YourFontName', sans-serif; 
+}
+
+.red-button {
+  background-color: #d91e18;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.red-button:hover {
+  background-color: #b01512;
+}
+
 .start-page {
   position: relative;
   width: 100%;
@@ -51,22 +66,6 @@ body {
   z-index: -1;
 }
 
-
-.custom-font {
-  font-family: 'YourFontName', sans-serif; 
-}
-
-.red-button {
-  background-color: #d91e18;
-  padding: 1rem 2rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-}
-
-.red-button:hover {
-  background-color: #b01512;
-}
-
 .main-page {
   position: relative;
   width: 100%;
@@ -83,9 +82,6 @@ body {
 .main-background {
   position: absolute;
   inset: 0;
-  background-image: url('/background-main.avif');
-  background-size: cover;
-  background-position: center;
   z-index: -1;
 }
 

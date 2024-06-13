@@ -25,7 +25,7 @@ const Home = () => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=YourFontName:wght@400;700&display=swap"
         />
-        <link rel="preload" href="/background-start.avif" as="image" />
+        {/* <link rel="preload" href="/background-start.avif" as="image" /> */}
       </Head>
       <div className="absolute inset-0 z-0 start-background">
         <Image
@@ -35,6 +35,7 @@ const Home = () => {
           style={{ objectFit: 'cover' }}
           priority
         />
+        
       </div>
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center z-[1]">
         <h1 className="text-3xl">

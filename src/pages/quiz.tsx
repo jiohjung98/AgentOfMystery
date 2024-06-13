@@ -72,9 +72,17 @@ const Quiz = () => {
       <Head>
         <title>미스테리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />
-        <link rel="preload" href="/background-main.avif" as="image" />
+        {/* <link rel="preload" href="/background-main.avif" as="image" /> */}
       </Head>
-      <div className="absolute inset-0 z-0 main-background"></div>
+      <div className="absolute inset-0 z-0 main-background">
+        <Image
+          src="/background-main.avif"
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+      </div>
       <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
