@@ -27,7 +27,15 @@ const Home = () => {
         />
         <link rel="preload" href="/background-start.avif" as="image" />
       </Head>
-      <div className="absolute inset-0 z-0 start-background"></div>
+      <div className="absolute inset-0 z-0 start-background">
+        <Image
+          src="/background-start.avif"
+          alt="Background"
+          fill
+          style={{ objectFit: 'cover' }}
+          priority
+        />
+      </div>
       <main className="flex-grow flex flex-col items-center justify-center px-4 py-4 mt-20 text-center z-[1]">
         <h1 className="text-3xl">
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
@@ -49,7 +57,7 @@ const Home = () => {
           </button>
         </div>
       )}
-      <footer className="text-center pb-6 items-center">
+      <footer className="text-center pb-6 items-center z-[1]">
         <Image 
           src='/netflix-logo.png' 
           alt='netflix' 

@@ -35,7 +35,6 @@ body {
 .start-page {
   position: relative;
   width: 100%;
-  max-width: 500px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,9 +48,6 @@ body {
 .start-background {
   position: absolute;
   inset: 0;
-  background-image: url('/background-start.avif');
-  background-size: cover;
-  background-position: center;
   z-index: -1;
 }
 
