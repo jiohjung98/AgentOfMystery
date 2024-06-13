@@ -76,7 +76,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
         <meta name="description" content="Your description here" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="flex-grow flex flex-col items-center justify-center px-6 py-4 text-center relative z-10">
+      <main className="flex-grow flex flex-col items-center px-4 py-4 text-center relative z-10">
         {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} />}
         {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} />}
