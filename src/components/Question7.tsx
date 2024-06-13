@@ -54,6 +54,7 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
               </motion.button>
             ))}
           </QuestionLayout>
+          <div className='page-count'>7 / 7</div>
         </motion.div>
       )}
     </AnimatePresence>
