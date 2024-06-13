@@ -67,7 +67,7 @@ const Quiz = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col main-page justify-center items-center">
+    <div className="max-w-[500px] min-h-screen flex flex-col main-page justify-center items-center mx-auto">
       <Head>
         <title>미스테리 수사단원 검증 미션</title>
         <meta name="description" content="Your description here" />

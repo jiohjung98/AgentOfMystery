@@ -31,7 +31,7 @@ const Result = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center result-page">
+    <div className="max-w-[500px] min-h-screen flex flex-col justify-center items-center result-page mx-auto">
       {renderResultComponent()}
       <Head>
         <link rel="preload" href="/background-result.png" as="image" />
