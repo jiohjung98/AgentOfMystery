@@ -5,7 +5,7 @@ const JohnParkResult: React.FC = () => {
   return (
     <div className="flex flex-col result-page text-white relative">
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[48px]">존 박</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[18px]">존 박</h1>
         <Image
           src="/JohnPark.png"
           alt="JohnPark"

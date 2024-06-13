@@ -37,15 +37,15 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
   };
 
   return (
-    <div className="max-w-[500px] flex flex-col justify-center items-center result-page mx-auto">
+    <div className="relative min-h-screen flex flex-col justify-center items-center mx-auto">
       <Head>
         <title>나와 가장 어울리는 수사단원은?</title>
         <meta name="description" content="검증 결과 페이지" />
         <link rel="preload" href="/background-result.png" as="image" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="relative flex-grow flex flex-col items-center h-[100%] px-4 text-center z-10">
-        <div className="absolute z-20">
+      <main className="relative flex-grow flex flex-col items-center w-full px-4 text-center z-10">
+        <div className="absolute z-20 top-[-30px]">
           <Image
             src="/result-paper.png"
             alt="result"
