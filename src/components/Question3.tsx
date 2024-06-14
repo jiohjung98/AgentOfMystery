@@ -54,7 +54,7 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
               </motion.button>
             ))}
           </QuestionLayout>
-          <div className='page-count'>3 / 7</div>
+          <div className='page-count font-hggothicssi-400'>3 / 7</div>
         </motion.div>
       )}
     </AnimatePresence>
