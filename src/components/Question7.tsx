@@ -10,16 +10,21 @@ interface Props {
 const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => {
   const [selected, setSelected] = useState<string | null>(null);
   const [textVisible, setTextVisible] = useState(false);
+  const [characters, setCharacters] = useState<string[]>(['혜리', '존박', '도훈', '은지', '카리나', '용진']);
 
-  const handleClick = (character: string) => {
-    setSelected(character);
-    setTimeout(() => handleAnswerSelect(character), 500);
-  };
+  useEffect(() => {
+    setCharacters((prevCharacters) => prevCharacters.sort(() => Math.random() - 0.5));
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => setTextVisible(true), 1100);
     return () => clearTimeout(timeout);
   }, []);
+
+  const handleClick = (character: string) => {
+    setSelected(character);
+    setTimeout(() => handleAnswerSelect(character), 500);
+  };
 
   return (
     <AnimatePresence>
@@ -59,10 +64,10 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           >
             {textVisible && (
               <>
-                {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
+               {characters.map((character, index) => (
                   <motion.button
                     key={index}
-                    className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left button-style ${
+                    className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
                       selected === character ? 'scale-105' : ''
                     }`}
                     onClick={() => handleClick(character)}
@@ -73,9 +78,8 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                     }}
                     transition={{ duration: 0.5 }}
                     initial={{ opacity: 0 }}
-                  >
-                    {getButtonText(character)}
-                  </motion.button>
+                    dangerouslySetInnerHTML={{ __html: `${index === 0 ? '① ' : index === 1 ? '② ' : index === 2 ? '③ ' : index === 3 ? '④ ' : index === 4 ? '⑤ ' : index === 5 ? '⑥ ' : ''}${getButtonText(character)}` }}
+                  />
                 ))}
               </>
             )}
@@ -90,35 +94,17 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return (
-        <>① 이 상황을 해결하기 위해, 앞서 찍어뒀던<br />단서들을 꺼내본다.</>
-      );
+      return '이 상황을 해결하기 위해, 앞서 찍어뒀던<br />단서들을 꺼내본다.';
     case '존박':
-      return (
-        <>② 반대편으로 미끄러지는 친구를 긴 팔로<br /> 붙잡아준다.</>
-      );
+      return '반대편으로 미끄러지는 친구를 긴 팔로<br /> 붙잡아준다.';
     case '도훈':
-     
-
-      return  (
-        <>③ 생각할 시간은 없어! 일단 눈 앞에 보이는<br/>밸브를 돌려본다.
-        </>
-      )
+      return '생각할 시간은 없어! 일단 눈 앞에 보이는<br/>밸브를 돌려본다.';
     case '은지':
-      return (
-        <>④ 얘들아, 괜찮아? 빨리 안전바 잡아! 나도<br/>힘들지만 동료들의 안전을 챙겨준다.
-        </>
-      )
+      return '얘들아, 괜찮아? 빨리 안전바 잡아! 나도<br/>힘들지만 동료들의 안전을 챙겨준다.'
     case '카리나':
-      return (
-        <>⑤ ...이게 무슨 일이지? 몸을 움츠리고 멍하니<br/>상황을 바라본다.
-        </>
-      )
+      return '...이게 무슨 일이지? 몸을 움츠리고 멍하니<br/>상황을 바라본다.'    
     case '용진':
-      return (
-        <>⑥ 일단 밸브를 오른쪽으로 돌려 봐! 상황을<br/>전달해준다.
-        </>
-      )
+      return '일단 밸브를 오른쪽으로 돌려 봐! 상황을<br/>전달해준다.';
     default:
       return '';
   }

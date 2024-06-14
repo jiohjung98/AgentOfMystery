@@ -24,7 +24,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
     setStartClicked(true);
     setTimeout(() => {
       router.push('/quiz');
-    }, 500); // 애니메이션 시간 후 페이지 이동
+    }, 500); 
   };
 
   return (

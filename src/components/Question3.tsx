@@ -10,16 +10,21 @@ interface Props {
 const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => {
   const [selected, setSelected] = useState<string | null>(null);
   const [textVisible, setTextVisible] = useState(false);
+  const [characters, setCharacters] = useState<string[]>(['혜리', '존박', '도훈', '은지', '카리나', '용진']);
 
-  const handleClick = (character: string) => {
-    setSelected(character);
-    setTimeout(() => handleAnswerSelect(character), 500);
-  };
+  useEffect(() => {
+    setCharacters((prevCharacters) => prevCharacters.sort(() => Math.random() - 0.5));
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => setTextVisible(true), 1100);
     return () => clearTimeout(timeout);
   }, []);
+
+  const handleClick = (character: string) => {
+    setSelected(character);
+    setTimeout(() => handleAnswerSelect(character), 500);
+  };
 
   return (
     <AnimatePresence>
@@ -58,7 +63,7 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           >
             {textVisible && (
               <>
-                {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
+                {characters.map((character, index) => (
                   <motion.button
                     key={index}
                     className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
@@ -72,9 +77,8 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                     }}
                     transition={{ duration: 0.5 }}
                     initial={{ opacity: 0 }}
-                  >
-                    {getButtonText(character)}
-                  </motion.button>
+                    dangerouslySetInnerHTML={{ __html: `${index === 0 ? '① ' : index === 1 ? '② ' : index === 2 ? '③ ' : index === 3 ? '④ ' : index === 4 ? '⑤ ' : index === 5 ? '⑥ ' : ''}${getButtonText(character)}` }}
+                  />
                 ))}
               </>
             )}
@@ -89,17 +93,17 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 허둥지둥 대다 결국 숨지 못한다.';
+      return '허둥지둥 대다 결국 숨지 못한다.';
     case '존박':
-      return '② 멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다.';
+      return '멀어도 가장 안심할 수 있는 확실한 공간으로 몸을 숨긴다.';
     case '도훈':
-      return '③ 문 틈 사이에 낀 손가락, 어설프게 숨는다.';
+      return '문 틈 사이에 낀 손가락, 어설프게 숨는다.';
     case '은지':
-      return '④ 불안한 마음에 몸이 얼어붙는다.';
+      return '불안한 마음에 몸이 얼어붙는다.';
     case '카리나':
-      return '⑤ 가장 가까운 공간으로 재빨리 몸을 숨긴다.';
+      return '가장 가까운 공간으로 재빨리 몸을 숨긴다.';
     case '용진':
-      return '⑥ 긴박한 순간에서도 동료들의 안전을 살핀다.';
+      return '긴박한 순간에서도 동료들의 안전을 살핀다.';
     default:
       return '';
   }

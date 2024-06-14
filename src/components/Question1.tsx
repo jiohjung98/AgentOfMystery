@@ -9,17 +9,22 @@ interface Props {
 
 const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => {
   const [selected, setSelected] = useState<string | null>(null);
-  const [textVisible, setTextVisible] = useState(false); 
+  const [textVisible, setTextVisible] = useState(false);
+  const [characters, setCharacters] = useState<string[]>(['혜리', '존박', '도훈', '은지', '카리나', '용진']);
 
-  const handleClick = (character: string) => {
-    setSelected(character);
-    setTimeout(() => handleAnswerSelect(character), 500);
-  };
+  useEffect(() => {
+    setCharacters((prevCharacters) => prevCharacters.sort(() => Math.random() - 0.5));
+  }, []);
 
   useEffect(() => {
     const timeout = setTimeout(() => setTextVisible(true), 1100);
     return () => clearTimeout(timeout);
   }, []);
+
+  const handleClick = (character: string) => {
+    setSelected(character);
+    setTimeout(() => handleAnswerSelect(character), 500);
+  };
 
   return (
     <AnimatePresence>
@@ -60,7 +65,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           >
             {textVisible && (
               <>
-                {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
+                {characters.map((character, index) => (
                   <motion.button
                     key={index}
                     className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
@@ -75,7 +80,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                     transition={{ duration: 0.5 }}
                     initial={{ opacity: 0 }}
                   >
-                    {getButtonText(character)}
+                    {index === 0 ? `① ${getButtonText(character)}` : index === 1 ? `② ${getButtonText(character)}` : index === 2 ? `③ ${getButtonText(character)}` : index === 3 ? `④ ${getButtonText(character)}` : index === 4 ? `⑤ ${getButtonText(character)}` : index === 5 ? `⑥ ${getButtonText(character)}` : getButtonText(character)}
                   </motion.button>
                 ))}
               </>
@@ -91,17 +96,17 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 적극적인 태도가 돋보이는 노력파';
+      return '적극적인 태도가 돋보이는 노력파';
     case '존박':
-      return '② 어떤 문제든 척척 풀어내는 브레인';
+      return '어떤 문제든 척척 풀어내는 브레인';
     case '도훈':
-      return '③ 열정만큼 몸부터 앞서는 행동파';
+      return '열정만큼 몸부터 앞서는 행동파';
     case '은지':
-      return '④ 공감능력 탑재한 분위기 메이커';
+      return '공감능력 탑재한 분위기 메이커';
     case '카리나':
-      return '⑤ 없는 게 없는 보부상';
+      return '없는 게 없는 보부상';
     case '용진':
-      return '⑥ 모두가 기댈 수 있는 리더';
+      return '모두가 기댈 수 있는 리더';
     default:
       return '';
   }
