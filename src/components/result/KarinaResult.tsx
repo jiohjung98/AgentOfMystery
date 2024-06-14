@@ -56,7 +56,7 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
         <p>- “제가 할게요” 눈치 빠른 성실한 막내</p>
         <p>- 숨바꼭질 장인! 무서우면 누구보다 빠르게 숨어버림</p>
-        <p>- “이것도 필요할 것 같아…” 일단 가방에 넣고 보는 콜렉터!</p>
+        <p>- “이것도 필요할 것 같아...” 일단 가방에 넣고 보는 콜렉터!</p>
         <p>- 조용히 있어도 모든 사람의 관심을 받는 존재감 강한 캐릭터</p>
         <p>- 착한 얼굴에 그렇지 못한 눈빛. 의외로 용감한 면모를 가진 반전매력</p>
       </div>
