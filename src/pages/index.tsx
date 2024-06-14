@@ -17,14 +17,25 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
   useEffect(() => {
     setTimeout(() => {
       setContentVisible(true);
-    }, 1500); 
+    }, 1500);
+    
+    // Update vh unit for mobile browsers
+    const updateViewportHeight = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
+
+    updateViewportHeight();
+    window.addEventListener('resize', updateViewportHeight);
+
+    return () => window.removeEventListener('resize', updateViewportHeight);
   }, []);
 
   const handleStartClick = () => {
     setStartClicked(true);
     setTimeout(() => {
       router.push('/quiz');
-    }, 500); 
+    }, 500);
   };
 
   return (
@@ -90,6 +101,13 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         <style jsx>{`
           .main-content {
             margin-top: 140px;
+            padding-bottom: 60px;
+          }
+
+          @media (max-height: 670px) {
+            .main-content {
+              margin-top: 110px;
+            }
           }
 
           @media (min-height: 900px) {
@@ -103,7 +121,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
               margin-top: 180px;
             }
           }
-          
+
           .border-white {
             border-color: white;
           }
