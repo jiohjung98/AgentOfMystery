@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -41,6 +41,10 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
   const handleStartClick = () => {
     setStartClicked(true);
     router.push('/');
+  };
+
+  const handleEventEntryClick = () => {
+    window.location.href = 'https://forms.gle/a8AFDe2xi1cxMMYF8';
   };
 
   const renderResultComponent = () => {
@@ -91,7 +95,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
           )}
         </div>
         <div className={`result-container ${showResult ? 'fade-in' : ''}`}>
-          <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 z-20">
+          <div className="absolute left-1/2 top-[20px] transform -translate-x-1/2 z-20">
             <Image
               src="/result-paper.png"
               alt="result"
@@ -101,16 +105,19 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
               style={{ transform: 'rotate(-2deg)' }}
             />
           </div>
+          <div className="font-hggothicssi-600 absolute right-4 top-[20px] z-20" onClick={handleStartClick}>
+            테스트 다시 하러 가기
+          </div>
           {renderResultComponent()}
           <motion.button
-            onClick={handleStartClick}
             className="text-2xl red-button w-[90%] mx-auto"
             style={{ display: 'block' }}
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: showResult ? 1 : 0, y: showResult ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.5 }} // 0.5초 딜레이 추가
+            transition={{ duration: 0.8, delay: 0.5 }}
+            onClick={handleEventEntryClick}
           >
-            테스트 다시하기
+            이벤트 응모하기
           </motion.button>
         </div>
       </main>

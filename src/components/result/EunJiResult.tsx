@@ -9,7 +9,7 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[17px]">이은지</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[67px]">이은지</h1>
         <Image
           src="/Eunji.png"
           alt="Eunji"

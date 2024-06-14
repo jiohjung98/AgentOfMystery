@@ -9,7 +9,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[17px]">존 박</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[67px]">존 박</h1>
         <Image
           src="/JohnPark.png"
           alt="JohnPark"
