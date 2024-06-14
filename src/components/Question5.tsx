@@ -24,17 +24,18 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.5"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
                   고지가 눈앞! 이제 탈출만 남은 상황이다.<br />
                   그 순간, 범인이 들이닥쳤다!<br />
                   범인들에게 순식간에 포위된 미스터리 수사단.
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
                 끌려가기 일보직전인 지금,<br/>가장 먼저 드는 생각은?
                 </h2>
               </>
@@ -43,7 +44,7 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}
@@ -74,7 +75,10 @@ const getButtonText = (character: string) => {
     case '카리나':
       return '⑤ 살려주세요 살려주세요 (멘붕으로 사고력 정지)';
     case '용진':
-      return '⑥ 미운 놈 떡 하나 더 줄 수 있으니 대화를 시도해볼까?';
+      return (
+        <>⑥ 미운 놈 떡 하나 더 줄 수 있으니<br/>대화를 시도해볼까?
+        </>
+      )
     default:
       return '';
   }

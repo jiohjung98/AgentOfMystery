@@ -24,16 +24,17 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.3"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
                   문제 해결에 한창인 도중,<br />동료가 아닌 낯선 인기척이 느껴졌다! <br />
                   낯선 사람의 발소리가 점점 커지는데!
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
                   긴박한 순간, 나는...
                 </h2>
               </>
@@ -42,7 +43,7 @@ const Question3: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}

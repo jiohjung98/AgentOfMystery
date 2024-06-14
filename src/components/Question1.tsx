@@ -24,19 +24,20 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.1"
             questionText={
               <>
-                <p className="font-hggothicssi-800 text-white text-sm leading-relaxed">
-                드디어 꿈에 그리던 <br />
-                미스터리 수사단에 합류하게 된 당신!!<br/>
-                불가사의하고 초자연적인 <br />
-                미션을 해결해야 한다.                
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
+                  드디어 꿈에 그리던 <br />
+                  미스터리 수사단에 합류하게 된 당신!!<br/>
+                  불가사의하고 초자연적인 <br />
+                  미션을 해결해야 한다.                
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
-                이때 내가 되고 싶은 <br /> 수사단원은?
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
+                  이때 내가 되고 싶은 <br /> 수사단원은?
                 </h2>
               </>
             }
@@ -44,7 +45,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left button-style ${
+                className={`bg-white text-black text-lg py-2 px-2 rounded-lg w-full text-left button-style ${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}

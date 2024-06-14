@@ -24,18 +24,19 @@ const Question6: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.6"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
                   사라진 실종자 6명을 찾고 있는 미스터리 수사단!<br />
                   다음 장소로 이동하려고 문을 열었는데,<br />
                   복도에 시체 한 구가 널브러져 있었다.<br/>
                   자세히 보니 머리 없는 시체...?!
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
                   이 때 나는...
                 </h2>
               </>
@@ -44,7 +45,7 @@ const Question6: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 pl-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}

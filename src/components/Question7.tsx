@@ -24,17 +24,18 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.7"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
                   심해 깊은 곳에 있는 잠수함으로 수사를 하러 갔다.<br />
                   그런데, 갑자기 여기저기서 울리는 사이렌!<br />
                   어어... 어....? 갑자기 잠수함이 기울어진다!
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
                 이때 나는...
                 </h2>
               </>
@@ -43,7 +44,7 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left button-style${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}
@@ -64,17 +65,35 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 이 상황을 해결하기 위해, 앞서 찍어뒀던 단서들을 꺼내본다.';
+      return  (
+        <>① 이 상황을 해결하기 위해, 앞서 찍어뒀던<br/>단서들을 꺼내본다.
+        </>
+      )
     case '존박':
-      return '② 반대편으로 미끄러지는 친구를 긴 팔로 붙잡아준다.';
+      return  (
+        <>② 반대편으로 미끄러지는 친구를 긴 팔로<br/> 붙잡아준다.
+        </>
+      )
     case '도훈':
-      return '③ 생각할 시간은 없어! 일단 눈 앞에 보이는 밸브를 돌려본다.';
+      return  (
+        <>③ 생각할 시간은 없어! 일단 눈 앞에 보이는<br/>밸브를 돌려본다.
+        </>
+      )
     case '은지':
-      return '④ 얘들아, 괜찮아? 빨리 안전바 잡아! 나도 힘들지만 동료들의 안전을 챙겨준다.';
+      return (
+        <>④ 얘들아, 괜찮아? 빨리 안전바 잡아! 나도<br/>힘들지만 동료들의 안전을 챙겨준다.
+        </>
+      )
     case '카리나':
-      return '⑤ ...이게 무슨 일이지? 몸을 움츠리고 멍하니 상황을 바라본다.';
+      return (
+        <>⑤ ...이게 무슨 일이지? 몸을 움츠리고 멍하니<br/>상황을 바라본다.
+        </>
+      )
     case '용진':
-      return '⑥ 일단 밸브를 오른쪽으로 돌려 봐! 상황을 전달해준다.';
+      return (
+        <>⑥ 일단 밸브를 오른쪽으로 돌려 봐! 상황을<br/>전달해준다.
+        </>
+      )
     default:
       return '';
   }

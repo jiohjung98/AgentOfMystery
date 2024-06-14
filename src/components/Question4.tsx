@@ -24,17 +24,18 @@ const Question4: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
+          className="w-full" 
         >
           <QuestionLayout
             questionNumber="Q.4"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
                   수사 도중 비밀의 방을 발견한 미스터리 수사단!<br />
                   비밀의 방 앞에 있는 의문의 버튼을 발견한다.<br />
                   누르면 들어갈 수 있는 건가...?
                 </p>
-                <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
+                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
                   이때 나는 어떻게 해야 할까?
                 </h2>
               </>
@@ -43,7 +44,7 @@ const Question4: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}

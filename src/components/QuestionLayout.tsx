@@ -12,11 +12,11 @@ const QuestionLayout: React.FC<Props> = ({ questionNumber, questionText, childre
       <div className="fixed-header">
         {questionNumber}
       </div>
-      <div className="flex flex-col items-center rounded-lg mt-[60px]">
+      <div className="w-full flex flex-col items-center rounded-lg mt-[60px]">
         <div className="text-center">
           {questionText}
         </div>
-        <div className="space-y-4 w-full px-2">
+        <div className="space-y-4 w-full">
           {children}
         </div>
       </div>
