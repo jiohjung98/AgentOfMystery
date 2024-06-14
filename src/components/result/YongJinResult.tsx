@@ -9,7 +9,7 @@ const YongJinResult: React.FC<YongJinResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[18px]">용진</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[18px]">이용진</h1>
         <Image
           src="/Yongjin.png"
           alt="Yongjin"
@@ -34,8 +34,8 @@ const YongJinResult: React.FC<YongJinResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
+            <span className="ml-[10px]">담력</span>
+            <span className="ml-auto text-yellow-400">★★☆☆☆</span>
           </div>
         </div>
         <div className="flex">
@@ -44,8 +44,8 @@ const YongJinResult: React.FC<YongJinResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">관찰력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="ml-[10px]">관찰력</span>
+            <span className="ml-auto text-yellow-400">★★★★★</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">

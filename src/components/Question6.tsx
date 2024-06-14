@@ -44,7 +44,7 @@ const Question6: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 pl-4 rounded-lg w-full text-left ${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}
@@ -65,17 +65,35 @@ const Question6: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '① 왜 시체에 머리가 없는지 생각해본다. “폭발 사고가 있었나?”';
+      return  (
+        <>① 왜 시체에 머리가 없는지 생각해본다.<br/>“폭발 사고가 있었나?"
+        </>
+      )
     case '존박':
-      return '② 놀랐지만 어떤 상황인지 조용히 파악해본다. “...”';
+      return (
+        <>② 놀랐지만 어떤 상황인지 조용히 파악해본다.<br/>“...”
+        </>
+      )
     case '도훈':
-      return '③ 동료들이 이동할 수 있게 시체를 밖으로 치운다. “읏차-”';
+      return (
+        <>③ 동료들이 이동할 수 있게 시체를 밖으로 치운다.<br/>“읏차-”
+        </>
+      )
     case '은지':
-      return '④ 시체를 보자마자 눈물이 쏟아질 것 같다. “이게 무슨 일이니...”';
+      return (
+        <>④ 시체를 보자마자 눈물이 쏟아질 것 같다.<br/>“이게 무슨 일이니...”
+        </>
+      )
     case '카리나':
-      return '⑤ 시체 옷을 뒤져서 발견한 물품을 챙겨둔다. “혹시 모르니까~”';
+      return  (
+        <>⑤ 시체 옷을 뒤져서 발견한 물품을 챙겨둔다.<br/>“혹시 모르니까~”
+        </>
+      )
     case '용진':
-      return '⑥ 찾고 있는 실종자와 시체의 신원을 대조해본다. “어?! 이 사람은-!”';
+      return (
+        <>⑥ 찾고 있는 실종자와 시체의 신원을 대조해본다.<br/>“어?! 이 사람은-!”
+        </>
+      )
     default:
       return '';
   }

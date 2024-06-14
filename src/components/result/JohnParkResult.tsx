@@ -31,11 +31,11 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">허당미</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-[10px]">허당미</span>
+            <span className="ml-auto text-yellow-400">★☆☆☆☆</span>
           </div>
         </div>
         <div className="flex">
@@ -44,8 +44,8 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">추리력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="ml-[10px]">추리력</span>
+            <span className="ml-auto text-yellow-400">★★★★★</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
@@ -55,7 +55,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
       </div>
       <div className="w-full text-left text-sm relative top-[-30px] z-30">
         <p>- '행동파'보다는 '두뇌파'!</p>
-        <p>- 하나를 보면 열을 안다! 추리력에 돈보다는 유형</p>
+        <p>- 하나를 보면 열을 안다! 추리력이 돋보이는 유형</p>
         <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>
         <p>- 다른 동료들도 챙기는 세심함은 보너스!</p>
         <p>- 일단 고민해보고 신중하게 합리적인 방향으로 행동함</p>

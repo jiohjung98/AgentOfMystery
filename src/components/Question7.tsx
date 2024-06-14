@@ -32,7 +32,7 @@ const Question7: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                 <p className="text-white text-sm leading-relaxed">
                   심해 깊은 곳에 있는 잠수함으로 수사를 하러 갔다.<br />
                   그런데, 갑자기 여기저기서 울리는 사이렌!<br />
-                  어어… 어….? 갑자기 잠수함이 기울어진다!
+                  어어... 어....? 갑자기 잠수함이 기울어진다!
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
                 이때 나는...

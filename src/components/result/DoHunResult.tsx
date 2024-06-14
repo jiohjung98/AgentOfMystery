@@ -9,7 +9,7 @@ const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[18px]">도훈</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[18px]">김도훈</h1>
         <Image
           src="/Dohun.png"
           alt="Dohun"
@@ -34,8 +34,8 @@ const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
+            <span className="ml-[10px]">담력</span>
+            <span className="ml-auto text-yellow-400">★★★★★</span>
           </div>
         </div>
         <div className="flex">
@@ -44,8 +44,8 @@ const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">차분함</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★☆☆☆☆</span>
+            <span className="ml-[10px]">차분함</span>
+            <span className="ml-auto text-yellow-400">★☆☆☆☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
@@ -59,12 +59,15 @@ const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
         <p>- 불의는 못 참지! 정의의 사도.</p>
         <p>- “이건 뭐지?, 저건 뭐지?” 신기함을 파헤치는 호기심왕</p>
         <p>- 콜, 당근이지, 오키! 일단 YES하고 보는 스타일.</p>
-        <p>- 내 사주엔 화(火)가 제일 많을 거야. 답답한 건 싫은 화끈한 캐릭터!</p>
+        <p>- 내 사주엔 화<span className="hanja">(火)</span>가 제일 많을 거야. 답답한 건 싫은 화끈한 캐릭터!</p>
       </div>
       <style jsx>{`
         .fade-in {
           opacity: 1;
           transition: opacity 1s ease-in-out;
+        }
+        .hanja {
+          font-family: 'Noto Sans KR', sans-serif;
         }
       `}</style>
     </div>

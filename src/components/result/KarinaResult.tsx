@@ -34,8 +34,8 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">담력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
+            <span className="ml-[10px]">담력</span>
+            <span className="ml-auto text-yellow-400">★★☆☆☆</span>
           </div>
         </div>
         <div className="flex">
@@ -44,8 +44,8 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
             <span className="ml-auto mr-[15px] text-yellow-400">★★★☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="">순발력</span>
-            <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+            <span className="ml-[10px]">순발력</span>
+            <span className="ml-auto text-yellow-400">★★★★☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
