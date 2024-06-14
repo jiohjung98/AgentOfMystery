@@ -104,12 +104,6 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
             padding-bottom: 60px;
           }
 
-          @media (max-height: 670px) {
-            .main-content {
-              margin-top: 110px;
-            }
-          }
-
           @media (min-height: 900px) {
             .main-content {
               margin-top: 160px;
