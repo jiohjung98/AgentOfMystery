@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuestionLayout from './QuestionLayout';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -9,11 +9,17 @@ interface Props {
 
 const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => {
   const [selected, setSelected] = useState<string | null>(null);
+  const [textVisible, setTextVisible] = useState(false);
 
   const handleClick = (character: string) => {
     setSelected(character);
-    setTimeout(() => handleAnswerSelect(character), 500); 
+    setTimeout(() => handleAnswerSelect(character), 500);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setTextVisible(true), 1100);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -24,38 +30,57 @@ const Question5: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-full" 
+          className="w-full"
         >
           <QuestionLayout
             questionNumber="Q.5"
             questionText={
               <>
-                <p className="font-hggothicssi-700 text-white text-sm leading-relaxed">
+                <motion.p
+                  className="font-hggothicssi-700 text-white text-sm leading-relaxed"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                >
                   고지가 눈앞! 이제 탈출만 남은 상황이다.<br />
                   그 순간, 범인이 들이닥쳤다!<br />
                   범인들에게 순식간에 포위된 미스터리 수사단.
-                </p>
-                <h2 className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug">
-                끌려가기 일보직전인 지금,<br/>가장 먼저 드는 생각은?
-                </h2>
+                </motion.p>
+                <motion.h2
+                  className="font-hggothicssi-800 text-white text-2xl font-bold my-4 text-center leading-snug"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  끌려가기 일보직전인 지금,<br/>가장 먼저 드는 생각은?
+                </motion.h2>
               </>
             }
           >
-            {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
-              <motion.button
-                key={index}
-                className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style${
-                  selected === character ? 'scale-105' : ''
-                }`}
-                onClick={() => handleClick(character)}
-                whileHover={{ y: -5 }}
-                animate={selected && selected !== character ? { opacity: 0.5 } : { opacity: 1 }}
-              >
-                {getButtonText(character)}
-              </motion.button>
-            ))}
+            {textVisible && (
+              <>
+                {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
+                  <motion.button
+                    key={index}
+                    className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
+                      selected === character ? 'scale-105' : ''
+                    }`}
+                    onClick={() => handleClick(character)}
+                    whileHover={{ y: -5 }}
+                    animate={{
+                      scale: selected === character ? 1.05 : 1,
+                      opacity: selected && selected !== character ? 0.5 : 1,
+                    }}
+                    transition={{ duration: 0.5 }}
+                    initial={{ opacity: 0 }}
+                  >
+                    {getButtonText(character)}
+                  </motion.button>
+                ))}
+              </>
+            )}
           </QuestionLayout>
-          <div className='page-count font-hggothicssi-400'>5 / 7</div>
+          <div className="page-count font-hggothicssi-400">5 / 7</div>
         </motion.div>
       )}
     </AnimatePresence>

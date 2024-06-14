@@ -38,7 +38,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
       ...prevScore,
       [character]: (prevScore[character] || 0) + 1,
     }));
-    setCurrentQuestion((prevQuestion) => prevQuestion + 1);
+    setTimeout(() => setCurrentQuestion((prevQuestion) => prevQuestion + 1), 500); // 애니메이션 시간 조정
   };
 
   const getMaxCharacter = () => {
