@@ -11,7 +11,7 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
       <div className="">
         <h1 className="relative z-40 text-4xl text-black mt-[18px]">카리나</h1>
         <Image
-          src="/Karina.png"
+          src="/Karina2.png"
           alt="Karina"
           width={500}
           height={500}
