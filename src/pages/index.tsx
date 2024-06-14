@@ -67,7 +67,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         >
           <button
             onClick={handleStartClick}
-            className="text-3xl red-button w-[90%] mx-auto"
+            className="text-2xl red-button w-[90%] mx-auto"
             style={{ display: 'block' }}
           >
             검증 미션 시작하기

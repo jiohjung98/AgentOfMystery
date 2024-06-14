@@ -29,7 +29,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             questionNumber="Q.1"
             questionText={
               <>
-                <p className="text-white text-sm leading-relaxed">
+                <p className="font-hggothicssi-800 text-white text-sm leading-relaxed">
                 드디어 꿈에 그리던 <br />
                 미스터리 수사단에 합류하게 된 당신!!<br/>
                 불가사의하고 초자연적인 <br />
@@ -44,7 +44,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
             {['혜리', '존박', '도훈', '은지', '카리나', '용진'].map((character, index) => (
               <motion.button
                 key={index}
-                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left ${
+                className={`bg-white text-black text-base py-2 px-4 rounded-lg w-full text-left button-style ${
                   selected === character ? 'scale-105' : ''
                 }`}
                 onClick={() => handleClick(character)}

@@ -64,7 +64,21 @@ body {
   transform: scale(1.05);
 }
 
+.button-style {
+  background-color: white;
+  color: black;
+  font-size: 1rem;
+  border-radius: 10px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
 
+.button-style:hover {
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 .start-page {
   position: relative;
