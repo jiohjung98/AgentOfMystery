@@ -31,7 +31,7 @@ const Question2: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
               <>
                 <p className="text-white text-sm leading-relaxed">
                   본격적인 추리를 앞둔 미스터리 수사단! <br />
-                  아직 아무런 정보도 주어지지 않았는데… <br />
+                  아직 아무런 정보도 주어지지 않았는데...<br />
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
                   수사 전, 어떤 걸 준비해야 할까?
