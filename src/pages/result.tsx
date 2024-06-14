@@ -9,6 +9,7 @@ import DoHunResult from '@/components/result/DoHunResult';
 import EunJiResult from '@/components/result/EunJiResult';
 import KarinaResult from '@/components/result/KarinaResult';
 import YongJinResult from '@/components/result/YongJinResult';
+import { motion } from 'framer-motion';
 
 type ResultsProps = {
   backgroundUrl: string;
@@ -18,18 +19,29 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
   const router = useRouter();
   const { character } = router.query;
   const [loading, setLoading] = useState(true);
+  const [showCompletedMessage, setShowCompletedMessage] = useState(false);
   const [showResult, setShowResult] = useState(false);
+  const [startClicked, setStartClicked] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); 
+      setLoading(false);
+      setShowCompletedMessage(true);
       setTimeout(() => {
-        setShowResult(true); 
+        setShowCompletedMessage(false);
+        setTimeout(() => {
+          setShowResult(true);
+        }, 500); 
       }, 1000); 
-    }, 4000);
+    }, 4000); 
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleStartClick = () => {
+    setStartClicked(true);
+    router.push('/');
+  };
 
   const renderResultComponent = () => {
     switch (character) {
@@ -66,19 +78,40 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
               <p className="ml-2 text-lg text-white">결과 분석 중...</p>
             </div>
           )}
+          {!loading && showCompletedMessage && (
+            <motion.p
+              className="text-lg text-white"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              결과 분석 완료!
+            </motion.p>
+          )}
         </div>
         <div className={`result-container ${showResult ? 'fade-in' : ''}`}>
           <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 z-20">
-          <Image
-            src="/result-paper.png"
-            alt="result"
-            width={200}
-            height={50}
-            priority
-            style={{ transform: 'rotate(-2deg)' }}
-          />
+            <Image
+              src="/result-paper.png"
+              alt="result"
+              width={200}
+              height={50}
+              priority
+              style={{ transform: 'rotate(-2deg)' }}
+            />
           </div>
           {renderResultComponent()}
+          <motion.button
+            onClick={handleStartClick}
+            className="text-2xl red-button w-[90%] mx-auto"
+            style={{ display: 'block' }}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: showResult ? 1 : 0, y: showResult ? 0 : 50 }}
+            transition={{ duration: 0.8, delay: 0.5 }} // 0.5초 딜레이 추가
+          >
+            테스트 다시하기
+          </motion.button>
         </div>
       </main>
       <footer className="text-center py-4 items-center relative z-10">
