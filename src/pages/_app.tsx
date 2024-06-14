@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+
 import localFont from 'next/font/local'
  
 // Font files can be colocated inside of `app`

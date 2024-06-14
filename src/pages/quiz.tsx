@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Background from '@/components/Background';
 import Question1 from '@/components/Question1';
 import Question2 from '@/components/Question2';
@@ -8,8 +9,8 @@ import Question5 from '@/components/Question5';
 import Question6 from '@/components/Question6';
 import Question7 from '@/components/Question7';
 import Image from 'next/image';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type Score = {
   [key: string]: number;
@@ -29,8 +30,6 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
     카리나: 0,
     용진: 0,
   });
-
-  console.log(score);
 
   const router = useRouter();
 
@@ -54,25 +53,33 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
   }
 
   return (
-    <div className="max-w-[500px] flex flex-col main-page justify-center items-center mx-auto">
-      <Head>
-        <title>미스테리 수사단원 검증 미션</title>
-        <meta name="description" content="Your description here" />
-      </Head>
-      <Background backgroundUrl={backgroundUrl} />
-      <main className="w-full flex-grow flex flex-col items-center h-[100%] px-4 pt-4 text-center relative z-10">
-        {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 4 && <Question4 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 5 && <Question5 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-        {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
-      </main>
-      <footer className="text-center py-4 items-center relative z-10">
-        <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
-      </footer>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        className="max-w-[500px] flex flex-col main-page justify-center items-center mx-auto"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <Head>
+          <title>미스테리 수사단원 검증 미션</title>
+          <meta name="description" content="Your description here" />
+        </Head>
+        <Background backgroundUrl={backgroundUrl} />
+        <main className="w-full flex-grow flex flex-col items-center h-[100%] px-4 pt-4 text-center relative z-10">
+          {currentQuestion === 1 && <Question1 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 2 && <Question2 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 3 && <Question3 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 4 && <Question4 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 5 && <Question5 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 6 && <Question6 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+          {currentQuestion === 7 && <Question7 handleAnswerSelect={handleAnswerSelect} currentQuestion={currentQuestion} />}
+        </main>
+        <footer className="text-center py-4 items-center relative z-10">
+          <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
+        </footer>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 
