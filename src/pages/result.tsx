@@ -31,9 +31,9 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
         setShowCompletedMessage(false);
         setTimeout(() => {
           setShowResult(true);
-        }, 500); 
-      }, 1000); 
-    }, 4000); 
+        }, 500);
+      }, 1000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -74,7 +74,13 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
         <link rel="preload" href="/background-result.avif" as="image" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="relative flex-grow flex flex-col items-center w-full px-4 text-center z-10">
+      <motion.main
+        className="relative flex-grow flex flex-col items-center w-full px-4 text-center z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30">
           {loading && (
             <div className="flex items-center justify-center">
@@ -120,7 +126,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
             이벤트 응모하기
           </motion.button>
         </div>
-      </main>
+      </motion.main>
       <footer className="text-center py-4 items-center relative z-10">
         <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
       </footer>

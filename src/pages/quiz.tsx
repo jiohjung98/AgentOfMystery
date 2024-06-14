@@ -84,7 +84,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
 };
 
 export const getServerSideProps = async () => {
-  const backgroundUrl = '/background-main.png';
+  const backgroundUrl = '/background-main.avif';
 
   return {
     props: {
