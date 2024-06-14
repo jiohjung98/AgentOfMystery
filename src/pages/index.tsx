@@ -37,9 +37,9 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Background backgroundUrl={backgroundUrl} />
-      <main className="flex-grow flex flex-col h-full items-center mx-auto px-4 py-4 mt-[140px] text-center z-[1]">
+      <main className="main-content flex-grow flex flex-col h-full items-center mx-auto px-4 py-4 text-center z-[1]">
         <motion.h1
-          className="text-3xl mt-[10px]"
+          className="font-hggothicssi-800 text-3xl mt-[10px]"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: isContentVisible ? 1 : 0, y: isContentVisible ? 0 : -50 }}
           transition={{ duration: 0.8 }} 
@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
         </motion.h1>
         <motion.p
-          className="text-lg leading-relaxed mt-8 font-weight"
+          className="font-hggothicssi-700 text-lg leading-relaxed mt-8"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isContentVisible ? 1 : 0, y: isContentVisible ? 0 : 50 }}
           transition={{ duration: 0.8, delay: 0.4 }} 
@@ -63,11 +63,11 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           className="absolute bottom-16 w-full px-6 z-[1]"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: isContentVisible ? 1 : 0, y: isContentVisible ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
           <button
             onClick={handleStartClick}
-            className="red-button w-[90%] mx-auto"
+            className="text-3xl red-button w-[90%] mx-auto"
             style={{ display: 'block' }}
           >
             검증 미션 시작하기
@@ -77,6 +77,27 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
       <footer className="absolute bottom-0 text-center pb-4 items-center z-10 w-full">
         <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
       </footer>
+      <style jsx>{`
+        .main-content {
+          margin-top: 140px;
+        }
+
+        @media (min-height: 900px) {
+          .main-content {
+            margin-top: 160px;
+          }
+        }
+
+        @media (min-height: 1000px) {
+          .main-content {
+            margin-top: 180px;
+          }
+        }
+        
+        .border-white {
+          border-color: white;
+        }
+      `}</style>
     </div>
   );
 };
