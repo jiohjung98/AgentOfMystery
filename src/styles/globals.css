@@ -167,3 +167,63 @@ body {
 .animate-fade-in-up {
   animation: fade-in-up 1s ease-out forwards;
 }
+
+@font-face {
+  font-family: 'HGGothicssi';
+  src: url('../font/HGGothicssi_00g.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HGGothicssi';
+  src: url('../font/HGGothicssi_20g.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HGGothicssi';
+  src: url('../font/HGGothicssi_40g.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HGGothicssi';
+  src: url('../font/HGGothicssi_60g.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HGGothicssi';
+  src: url('../font/HGGothicssi_80g.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+.font-hggothicssi-200 {
+  font-family: 'HGGothicssi', sans-serif;
+  font-weight: 200;
+}
+
+.font-hggothicssi-400 {
+  font-family: 'HGGothicssi', sans-serif;
+  font-weight: 400;
+}
+
+.font-hggothicssi-600 {
+  font-family: 'HGGothicssi', sans-serif;
+  font-weight: 600;
+}
+
+.font-hggothicssi-700 {
+  font-family: 'HGGothicssi', sans-serif;
+  font-weight: 700;
+}
+
+.font-hggothicssi-900 {
+  font-family: 'HGGothicssi', sans-serif;
+  font-weight: 900;
+}

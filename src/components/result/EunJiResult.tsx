@@ -9,7 +9,7 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[18px]">이은지</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[17px]">이은지</h1>
         <Image
           src="/Eunji.png"
           alt="Eunji"
@@ -18,11 +18,11 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
           priority
           className="relative z-10 top-[-30px]"
         />
-        <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
           확신의 F형 인간! 감성적 보호자 은지
           </p>
-          <p className="text-xs">
+          <p className="font-hggothicssi-700 text-sm">
           #공감왕 #긍정에너지 #서포터 #리액션부자
           </p>
         </div>
@@ -53,7 +53,7 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
         <p>- 촌철살인 리액션은 바로 공감과 이해에서부터 나온다</p>
         <p>- 무서운 건 싫어ㅠㅠ 깜짝 놀라면 발 빠르게 도망가는 타입</p>
         <p>- 공감 KING! 지친 동료들의 기운을 북돋아 줌</p>

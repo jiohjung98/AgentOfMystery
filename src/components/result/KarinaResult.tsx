@@ -9,7 +9,7 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[18px]">카리나</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[17px]">카리나</h1>
         <Image
           src="/Karina2.png"
           alt="Karina"
@@ -18,11 +18,11 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
           priority
           className="relative z-10 top-[-30px]"
         />
-        <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
             없는 게 없다! 만능 주머니 탑재한 막냉이 카리나
           </p>
-          <p className="text-xs">
+          <p className="font-hggothicssi-700 text-sm">
             #손_빠른_막내 #보부상 #확신의_사랑둥이
           </p>
         </div>
@@ -49,11 +49,11 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">눈차</span>
+          <span className="">눈치</span>
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
         <p>- “제가 할게요” 눈치 빠른 성실한 막내</p>
         <p>- 숨바꼭질 장인! 무서우면 누구보다 빠르게 숨어버림</p>
         <p>- “이것도 필요할 것 같아...” 일단 가방에 넣고 보는 콜렉터!</p>

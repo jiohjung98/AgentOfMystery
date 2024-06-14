@@ -9,7 +9,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[18px]">존 박</h1>
+        <h1 className="relative z-40 text-4xl text-black mt-[17px]">존 박</h1>
         <Image
           src="/JohnPark.png"
           alt="JohnPark"
@@ -18,11 +18,11 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
           priority
           className="relative z-10 top-[-30px]"
         />
-        <div className="relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
             모르는 문제는 나에게 물어봐~ 수사단 브레인 존박
           </p>
-          <p className="text-xs">
+          <p className="font-hggothicssi-700 text-sm">
             #브레인 #만능해결사 #척척박사 #추리_괴물
           </p>
         </div>
@@ -50,10 +50,10 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
         </div>
         <div className="flex items-center w-1/2">
           <span className="">집중력</span>
-          <span className="ml-auto mr-[15px] text-yellow-400">★★★★☆</span>
+          <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
         <p>- '행동파'보다는 '두뇌파'!</p>
         <p>- 하나를 보면 열을 안다! 추리력이 돋보이는 유형</p>
         <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>

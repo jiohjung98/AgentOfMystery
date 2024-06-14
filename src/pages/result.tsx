@@ -69,13 +69,14 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
         </div>
         <div className={`result-container ${showResult ? 'fade-in' : ''}`}>
           <div className="absolute top-[-30px] left-1/2 transform -translate-x-1/2 z-20">
-            <Image
-              src="/result-paper.png"
-              alt="result"
-              width={200}
-              height={50}
-              priority
-            />
+          <Image
+            src="/result-paper.png"
+            alt="result"
+            width={200}
+            height={50}
+            priority
+            style={{ transform: 'rotate(-2deg)' }}
+          />
           </div>
           {renderResultComponent()}
         </div>

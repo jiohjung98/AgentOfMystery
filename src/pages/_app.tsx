@@ -6,6 +6,11 @@ import localFont from 'next/font/local'
 const hggothicssi = localFont({
   src: [
     {
+      path: '../font/HGGothicssi_00g.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
       path: '../font/HGGothicssi_20g.ttf',
       weight: '400',
       style: 'normal',

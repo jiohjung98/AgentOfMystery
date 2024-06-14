@@ -31,7 +31,7 @@ const Question1: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
               <>
                 <p className="text-white text-sm leading-relaxed">
                 드디어 꿈에 그리던 <br />
-                미스터리 수사단에 합류하게 당신!!<br/>
+                미스터리 수사단에 합류하게 된 당신!!<br/>
                 불가사의하고 초자연적인 <br />
                 미션을 해결해야 한다.                
                 </p>
