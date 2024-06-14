@@ -67,7 +67,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center mx-auto">
+    <div className="max-w-[500px] relative min-h-screen flex flex-col justify-between items-center mx-auto">
       <Head>
         <title>나와 가장 어울리는 수사단원은?</title>
         <meta name="description" content="검증 결과 페이지" />
@@ -100,37 +100,26 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
             </motion.p>
           )}
         </div>
-        <div className={`result-container ${showResult ? 'fade-in' : ''}`}>
-          <div className="absolute left-1/2 top-[20px] transform -translate-x-1/2 z-20">
-            <Image
-              src="/result-paper.png"
-              alt="result"
-              width={200}
-              height={50}
-              priority
-              style={{ transform: 'rotate(-2deg)' }}
-            />
-          </div>
-          <div className="font-hggothicssi-600 absolute right-4 top-[20px] z-20" onClick={handleStartClick}>
+        <div className={`result-container pb-[50px] ${showResult ? 'fade-in' : ''}`}>
+          <div className="font-hggothicssi-600 absolute text-sm right-4 top-[20px] z-20" onClick={handleStartClick}>
             테스트 다시 하러 가기
           </div>
           {renderResultComponent()}
-          <motion.button
-            className="text-2xl red-button w-[90%] mx-auto"
-            style={{ display: 'block' }}
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: showResult ? 1 : 0, y: showResult ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            onClick={handleEventEntryClick}
-          >
-            이벤트 응모하기
-          </motion.button>
         </div>
       </motion.main>
-      <footer className="text-center py-4 items-center relative z-10">
+      <footer className="text-center py-4 w-full flex flex-col items-center relative z-10">
+        <motion.button
+          className="text-2xl red-button w-[90%] mx-auto mb-4"
+          style={{ display: 'block' }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: showResult ? 1 : 0, y: showResult ? 0 : 50 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          onClick={handleEventEntryClick}
+        >
+          이벤트 응모하기
+        </motion.button>
         <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
       </footer>
-
       <style jsx>{`
         .result-container {
           opacity: 0;
@@ -140,7 +129,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
           opacity: 1;
         }
         .border-white {
-          border-color: white; /* 로딩 스피너 테두리 색상 설정 */
+          border-color: white;
         }
       `}</style>
     </div>

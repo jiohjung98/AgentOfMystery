@@ -9,16 +9,23 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[67px]">존 박</h1>
+      <Image
+          src="/JohnParkTitle.svg"
+          alt="JohnPark"
+          width={200}
+          height={50}
+          priority
+          className="absolute left-1/2 transform -translate-x-1/2 z-20"
+        />
         <Image
           src="/JohnPark.png"
           alt="JohnPark"
           width={500}
           height={500}
           priority
-          className="relative z-10 top-[-30px]"
+          className="relative z-10 top-[60px]"
         />
-        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative px-2 py-4 mb-4 top-[60px] relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
             모르는 문제는 나에게 물어봐~ 수사단 브레인 존박
           </p>
@@ -27,7 +34,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
           </p>
         </div>
       </div>
-      <div className="w-full relative top-[-40px] space-y-2 text-lg relative z-30">
+      <div className="w-full relative top-[50px] space-y-2 text-lg relative z-30">
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
@@ -53,7 +60,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full top-[60px] pb-4 text-left text-sm relative z-30">
         <p>- '행동파'보다는 '두뇌파'!</p>
         <p>- 하나를 보면 열을 안다! 추리력이 돋보이는 유형</p>
         <p>- 깜짝 놀라긴 하지만, 차분히 상황을 파악하는 스타일</p>

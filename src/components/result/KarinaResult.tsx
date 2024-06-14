@@ -9,16 +9,23 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[67px]">카리나</h1>
+      <Image
+          src="/KarinaTitle.svg"
+          alt="Karina"
+          width={200}
+          height={50}
+          priority
+          className="absolute left-1/2 transform -translate-x-1/2 z-20"
+        />
         <Image
           src="/Karina2.png"
           alt="Karina"
           width={500}
           height={500}
           priority
-          className="relative z-10 top-[-30px]"
+          className="relative z-10 top-[60px]"
         />
-        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative px-2 py-4 mb-4 top-[60px] relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
             없는 게 없다! 만능 주머니 탑재한 막냉이 카리나
           </p>
@@ -27,7 +34,7 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
           </p>
         </div>
       </div>
-      <div className="w-full relative top-[-40px] space-y-2 text-lg relative z-30">
+      <div className="w-full relative top-[50px] space-y-2 text-lg relative z-30">
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
@@ -53,7 +60,7 @@ const KarinaResult: React.FC<DoHunResultProps> = ({ show }) => {
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full top-[60px] pb-4 text-left text-sm relative z-30">
         <p>- “제가 할게요” 눈치 빠른 성실한 막내</p>
         <p>- 숨바꼭질 장인! 무서우면 누구보다 빠르게 숨어버림</p>
         <p>- “이것도 필요할 것 같아...” 일단 가방에 넣고 보는 콜렉터!</p>

@@ -9,16 +9,23 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
   return (
     <div className={`flex flex-col result-page text-white relative ${show ? 'fade-in' : ''}`}>
       <div className="">
-        <h1 className="relative z-40 text-4xl text-black mt-[67px]">이은지</h1>
+      <Image
+          src="/EunjiTitle.svg"
+          alt="Eunji"
+          width={200}
+          height={50}
+          priority
+          className="absolute left-1/2 transform -translate-x-1/2 z-20"
+        />
         <Image
           src="/Eunji.png"
           alt="Eunji"
           width={500}
           height={500}
           priority
-          className="relative z-10 top-[-30px]"
+          className="relative z-10 top-[60px]"
         />
-        <div className="font-hggothicssi-900 relative top-[-30px] p-4 mb-4 relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative px-2 py-4 mb-4 top-[60px] relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
           확신의 F형 인간! 감성적 보호자 은지
           </p>
@@ -27,7 +34,7 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
           </p>
         </div>
       </div>
-      <div className="w-full relative top-[-40px] space-y-2 text-lg relative z-30">
+      <div className="w-full relative top-[50px] space-y-2 text-lg relative z-30">
         <div className="flex">
           <div className="flex items-center w-1/2">
             <span className="">행동력</span>
@@ -53,7 +60,7 @@ const EunJiResult: React.FC<EunJiResultProps> = ({ show }) => {
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
-      <div className="font-hggothicssi-400 w-full text-left text-sm relative top-[-30px] z-30">
+      <div className="font-hggothicssi-400 w-full top-[60px] pb-4 text-left text-sm relative z-30">
         <p>- 촌철살인 리액션은 바로 공감과 이해에서부터 나온다</p>
         <p>- 무서운 건 싫어ㅠㅠ 깜짝 놀라면 발 빠르게 도망가는 타입</p>
         <p>- 공감 KING! 지친 동료들의 기운을 북돋아 줌</p>
