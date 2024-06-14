@@ -68,7 +68,7 @@ const getButtonText = (character: string) => {
       return '② 슬쩍- 안 주머니로 몰래 휴대폰을 숨겨둔다.';
     case '도훈':
       return  (
-        <>③ 장갑… 노트… 왠지 필요할 것 같은 실용적인 물건을 챙긴다.
+        <>③ 장갑... 노트... 왠지 필요할 것 같은 실용적인 물건을 챙긴다.
         </>
       )
     case '은지':

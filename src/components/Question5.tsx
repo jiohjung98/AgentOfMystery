@@ -66,7 +66,7 @@ const getButtonText = (character: string) => {
     case '혜리':
       return '① 이정도 시련쯤이야, 얼른 탈출할 수 있어!';
     case '존박':
-      return '② 이게 무슨 상황이지…?';
+      return '② 이게 무슨 상황이지...?';
     case '도훈':
       return '③ 아니 이걸 걸렸다고? 아 진짜 아쉽다...';
     case '은지':

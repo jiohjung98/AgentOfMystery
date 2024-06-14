@@ -33,7 +33,7 @@ const Question6: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                   사라진 실종자 6명을 찾고 있는 미스터리 수사단!<br />
                   다음 장소로 이동하려고 문을 열었는데,<br />
                   복도에 시체 한 구가 널브러져 있었다.<br/>
-                  자세히 보니 머리 없는 시체…?!
+                  자세히 보니 머리 없는 시체...?!
                 </p>
                 <h2 className="text-white text-2xl font-bold my-4 text-center leading-snug">
                   이 때 나는...
