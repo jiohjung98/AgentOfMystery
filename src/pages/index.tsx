@@ -68,7 +68,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
             무정부 국제 조직 XIN <br />( <span className="text-red-500">X </span><span className="text-red-500">I</span>nvestigation <span className="text-red-500">N</span>etwork )
           </motion.h1>
           <motion.p
-            className="font-hggothicssi-700 text-lg leading-relaxed mt-8"
+            className="font-hggothicssi-700 text-lg leading-relaxed mt-8 mb-4"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: isContentVisible ? 1 : 0, y: isContentVisible ? 0 : 50 }}
             transition={{ duration: 0.8, delay: 0.4 }} 
@@ -78,8 +78,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
             수사단 최정예 요원이 되기까지,<br />마지막 한 단계만 남았다!<br />
             현장에 투입된 나와 가장 닮은<br />미스터리 수사단원은?
           </motion.p>
-        </main>
-        {!startClicked && (
+          {!startClicked && (
           <motion.div
             className="absolute bottom-16 w-full px-6 z-[1]"
             initial={{ opacity: 0, y: 50 }}
@@ -95,7 +94,8 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
             </button>
           </motion.div>
         )}
-        <footer className="absolute bottom-0 text-center pb-4 items-center z-10 w-full">
+        </main>
+        <footer className="text-center pb-4 items-center z-10 w-full">
           <Image src='/netflix-logo.png' alt='netflix' className='mx-auto' width={100} height={50} priority />
         </footer>
         <style jsx>{`
@@ -106,7 +106,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
 
           @media (min-height: 900px) {
             .main-content {
-              margin-top: 160px;
+              margin-top: 160px;22
             }
           }
 
