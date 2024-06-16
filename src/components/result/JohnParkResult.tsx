@@ -25,7 +25,7 @@ const JohnParkResult: React.FC<JohnParkResultProps> = ({ show }) => {
           priority
           className="relative z-10 top-[60px]"
         />
-        <div className="font-hggothicssi-900 relative px-2 py-4 mb-4 top-[60px] relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
+        <div className="font-hggothicssi-900 relative py-4 mb-4 top-[60px] relative z-30" style={{ backgroundColor: 'rgb(53, 20, 15)' }}>
           <p className="mb-2">
             모르는 문제는 나에게 물어봐~ 수사단 브레인 존박
           </p>
