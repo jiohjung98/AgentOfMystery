@@ -107,19 +107,71 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
           {renderResultComponent()}
         </div>
       </motion.main>
-      <footer className="text-center py-4 w-full flex flex-col items-center relative z-10">
+      <motion.footer
+        className="text-center py-4 w-full flex flex-col items-center relative z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: showResult ? 1 : 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
+        <div className="mb-4">
+          <div className="font-hggothicssi-600 text-xl mb-2 mt-4">
+            검증 미션에 참여한 수사단원에게 주어지는
+            <br />
+            &lt;미스터리 수사단&gt; 스페셜 굿즈 응모 기회!
+          </div>
+          <div className="relative h-[55px]">
+            <Image
+              src="/eventbackground.png"
+              alt="event"
+              className="mx-auto"
+              width={170}
+              height={50}
+              priority
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-hggothicssi-800">
+              이벤트 기간
+            </div>
+          </div>
+          <div className='mb-[10px]'>
+            <div className='font-hggothicssi-600 text-lg'>24.06.18 (화)- 24.06.25 (화) 2:00PM 까지</div>
+            <div className='font-hggothicssi-600 text-[10px]'>※ 본 이벤트 당첨자는 24.06.26 [수] 2:00 PM 이후 문자를 통한 개별 안내</div>
+          </div>
+          <div className="relative w-full h-[55px]">
+            <Image
+              src="/eventbackground.png"
+              alt="event"
+              className="mx-auto"
+              width={170}
+              height={50}
+              priority
+            />
+            <Image
+              src="/eventPhoto.png"
+              alt="event"
+              width={100}
+              height={30}
+              className="absolute left-[-15px] top-1/2 transform -translate-y-1/2"
+            />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-2xl font-hggothicssi-800">
+              이벤트 상품
+            </div>
+          </div>
+          <div className='mb-[10px]'>
+            <div className='font-hggothicssi-600 text-lg'>&lt;미스터리 수사단&gt;에 관련된<br/>특별한 굿즈가 들어있는 미스터리 박스</div>
+          </div>
+        </div>
         <motion.button
-          className="text-2xl red-button w-[90%] mx-auto mb-4"
-          style={{ display: 'block' }}
+          className="font-hggothicssi-800 text-xl w-[70%] mx-auto mb-4 rounded-xl py-2"
+          style={{ display: 'block', backgroundColor: 'rgb(85, 21, 25)' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: showResult ? 1 : 0, y: showResult ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
           onClick={handleEventEntryClick}
         >
           이벤트 응모하기
         </motion.button>
         <Image src="/netflix-logo.png" alt="netflix" className="mx-auto" width={100} height={50} priority />
-      </footer>
+      </motion.footer>
       <style jsx>{`
         .result-container {
           opacity: 0;

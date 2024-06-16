@@ -32,7 +32,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
   });
 
   console.log(score);
-  
+
   const router = useRouter();
 
   const handleAnswerSelect = (character: string) => {
@@ -40,7 +40,7 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
       ...prevScore,
       [character]: (prevScore[character] || 0) + 1,
     }));
-    setTimeout(() => setCurrentQuestion((prevQuestion) => prevQuestion + 1), 500); // 애니메이션 시간 조정
+    setTimeout(() => setCurrentQuestion((prevQuestion) => prevQuestion + 1), 500);
   };
 
   const getMaxCharacter = () => {
