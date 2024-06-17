@@ -1,3 +1,4 @@
+import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 
@@ -41,10 +42,15 @@ const myFont = localFont({
   display: 'swap',
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className={myFont.className}>
+    <>
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      ) : null}
       <Component {...pageProps} />
-    </div>
+    </>
   );
 }
+
+export default MyApp;
