@@ -67,7 +67,7 @@ const Question4: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
                 {characters.map((character, index) => (
                   <motion.button
                     key={index}
-                    className={`bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
+                    className={`font-hggothicssi-800 bg-white text-black text-base py-2 pl-2 rounded-lg w-full text-left button-style ${
                       selected === character ? 'scale-105' : ''
                     }`}
                     onClick={() => handleClick(character)}

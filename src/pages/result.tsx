@@ -85,12 +85,12 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
           {loading && (
             <div className="flex items-center justify-center">
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white"></div>
-              <p className="ml-2 text-lg text-white">결과 분석 중...</p>
+              <p className="font-hggothicssi-800 ml-2 text-lg text-white">결과 분석 중...</p>
             </div>
           )}
           {!loading && showCompletedMessage && (
             <motion.p
-              className="text-lg text-white"
+              className="font-hggothicssi-800 text-lg text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
