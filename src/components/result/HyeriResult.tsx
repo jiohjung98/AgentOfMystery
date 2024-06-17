@@ -63,7 +63,7 @@ const HyeriResult: React.FC<HyeriResultProps> = ({ show }) => {
       <div className="font-hggothicssi-400 w-full top-[60px] pb-4 text-left text-sm relative z-30">
         <p>- 상황의 인과관계를 파악하려고 노력함</p>
         <p>- 꺅!! 깜짝 놀랄 상황에서는 앞장서기 보단, 뒤에서 빼꼼~?</p>
-        <p>- 방탈출 고인물 답게 늘 자신감 있는 태도로 임함</p>
+        <p>- 방탈출 고인물답게 늘 자신감 있는 태도로 임함</p>
         <p>- 동료들의 의견에 귀를 잘 기울이고 협력하는 유형</p>
         <p>- 단서를 수집할 때나, 문제를 해결하려고 할 때 귀여운 허당미도 뽐냄</p>
       </div>
