@@ -31,7 +31,6 @@ const Quiz: React.FC<QuizProps> = ({ backgroundUrl }) => {
     용진: 0,
   });
 
-  console.log(score);
 
   const router = useRouter();
 
