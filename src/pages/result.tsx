@@ -146,7 +146,7 @@ const Result: React.FC<ResultsProps> = ({ backgroundUrl }) => {
               priority
             />
             <Image
-              src="/eventPhoto.png"
+              src="/eventBox.png"
               alt="event"
               width={100}
               height={30}
