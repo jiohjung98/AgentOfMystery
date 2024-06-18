@@ -62,6 +62,8 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           <meta name="twitter:image" content="https://agent-of-mystery.vercel.app/mainlogo2.png" />
           <meta name="twitter:url" content="https://agent-of-mystery.vercel.app/" />
 
+          <meta name="naver-site-verification" content="1a411e04aef516e5605f5fcdab50368f775363ab" />
+
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Background backgroundUrl={backgroundUrl} />
