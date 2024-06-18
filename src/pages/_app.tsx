@@ -1,6 +1,7 @@
 import GoogleAnalytics from "@/lib/GoogleAnalytics";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { Analytics } from '@vercel/analytics/react';
 
 import localFont from 'next/font/local'
  
@@ -49,6 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
       ) : null}
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }
