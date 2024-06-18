@@ -93,7 +93,7 @@ const Question2: React.FC<Props> = ({ handleAnswerSelect, currentQuestion }) => 
 const getButtonText = (character: string) => {
   switch (character) {
     case '혜리':
-      return '충분한 숙면은 필수! 전 날 밤, 푹 자고 온다.';
+      return '충분한 숙면은 필수! 전날 밤, 푹 자고 온다.';
     case '존박':
       return '슬쩍- 안 주머니로 몰래 휴대폰을 숨겨둔다.';
     case '도훈':
