@@ -55,6 +55,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           <meta property="og:image" content="https://agent-of-mystery.vercel.app/mainlogo3.png" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
           <meta property="og:url" content="https://agent-of-mystery.vercel.app/" />
+          <meta property="og:type" content="website" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="미스터리 수사단원 검증 미션" />
@@ -64,7 +65,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
 
           
           <meta name="naver-site-verification" content="1a411e04aef516e5605f5fcdab50368f775363ab" />
-          
+
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Background backgroundUrl={backgroundUrl} />
