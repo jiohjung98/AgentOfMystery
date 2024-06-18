@@ -37,26 +37,26 @@ const DoHunResult: React.FC<DoHunResultProps> = ({ show }) => {
       <div className="w-full relative top-[50px] space-y-2 text-lg relative z-30">
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">행동력</span>
+            <span className="font-hggothicssi-600">행동력</span>
             <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="ml-[10px]">담력</span>
+            <span className="font-hggothicssi-600 ml-[10px]">담력</span>
             <span className="ml-auto text-yellow-400">★★★★★</span>
           </div>
         </div>
         <div className="flex">
           <div className="flex items-center w-1/2">
-            <span className="">집중력</span>
+            <span className="font-hggothicssi-600">집중력</span>
             <span className="ml-auto mr-[15px] text-yellow-400">★★☆☆☆</span>
           </div>
           <div className="flex items-center w-1/2">
-            <span className="ml-[10px]">차분함</span>
+            <span className="font-hggothicssi-600 ml-[10px]">차분함</span>
             <span className="ml-auto text-yellow-400">★☆☆☆☆</span>
           </div>
         </div>
         <div className="flex items-center w-1/2">
-          <span className="">궁금증</span>
+          <span className="font-hggothicssi-600">궁금증</span>
           <span className="ml-auto mr-[15px] text-yellow-400">★★★★★</span>
         </div>
       </div>
