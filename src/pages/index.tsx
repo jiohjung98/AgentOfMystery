@@ -47,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <Head>
+         <Head>
           <title>미스터리 수사단원 검증 미션</title>
           <meta name="description" content="Agent Of Mystery" />
           <meta property="og:title" content="미스터리 수사단원 검증 미션" />
@@ -59,7 +59,7 @@ const Home: React.FC<HomeProps> = ({ backgroundUrl }) => {
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="미스터리 수사단원 검증 미션" />
           <meta name="twitter:description" content="검증 미션 시작하기" />
-          <meta name="twitter:image" content="https://www.agents-of-mystery-event.com/mainlogo2.png" />
+          <meta name="twitter:image" content="https://www.agents-of-mystery-event.com/mainlogo3.png" />
           <meta name="twitter:url" content="https://www.agents-of-mystery-event.com/" />
           
           <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
